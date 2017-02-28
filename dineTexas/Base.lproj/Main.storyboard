@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="1159" y="1029"/>
         </scene>
-        <!--Welcome Screen-->
+        <!--Welcome-->
         <scene sceneID="mFg-Ju-5K6">
             <objects>
-                <viewController title="Welcome Screen" id="Aya-Fp-zyb" sceneMemberID="viewController">
+                <viewController title="Welcome" id="Aya-Fp-zyb" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r9T-mH-qfM"/>
                         <viewControllerLayoutGuide type="bottom" id="9rp-3j-Feg"/>
@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="2124" y="-76.011994002998506"/>
         </scene>
-        <!--Login Screen-->
+        <!--Login-->
         <scene sceneID="owL-OS-c01">
             <objects>
-                <viewController title="Login Screen" id="6Cx-hU-S0M" sceneMemberID="viewController">
+                <viewController title="Login" id="6Cx-hU-S0M" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GQ0-7Z-aNV"/>
                         <viewControllerLayoutGuide type="bottom" id="n95-p2-NC0"/>
@@ -220,10 +220,10 @@
             </objects>
             <point key="canvasLocation" x="4876" y="58.920539730134934"/>
         </scene>
-        <!--Registration Screen-->
+        <!--Registration-->
         <scene sceneID="L7U-eU-eDN">
             <objects>
-                <viewController title="Registration Screen" id="qGv-Mm-Kwc" sceneMemberID="viewController">
+                <viewController title="Registration" id="qGv-Mm-Kwc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z7e-VU-63z"/>
                         <viewControllerLayoutGuide type="bottom" id="maD-p0-Kj9"/>
