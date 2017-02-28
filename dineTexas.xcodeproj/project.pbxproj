@@ -13,6 +13,7 @@
 		D48BF15D1E64EB5C00F62098 /* dineTexas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D48BF15B1E64EB5C00F62098 /* dineTexas.xcdatamodeld */; };
 		D48BF15F1E64EB5C00F62098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48BF15E1E64EB5C00F62098 /* Assets.xcassets */; };
 		D48BF1621E64EB5C00F62098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48BF1601E64EB5C00F62098 /* LaunchScreen.storyboard */; };
+		EFCDBB9C1E65F88E0053EFA2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDBB9B1E65F88D0053EFA2 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D48BF15E1E64EB5C00F62098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48BF1611E64EB5C00F62098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48BF1631E64EB5C00F62098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFCDBB9B1E65F88D0053EFA2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				D48BF1541E64EB5C00F62098 /* AppDelegate.swift */,
 				D48BF1561E64EB5C00F62098 /* ViewController.swift */,
+				EFCDBB9B1E65F88D0053EFA2 /* MapViewController.swift */,
 				D48BF1581E64EB5C00F62098 /* Main.storyboard */,
 				D48BF15E1E64EB5C00F62098 /* Assets.xcassets */,
 				D48BF1601E64EB5C00F62098 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 				D48BF15D1E64EB5C00F62098 /* dineTexas.xcdatamodeld in Sources */,
 				D48BF1571E64EB5C00F62098 /* ViewController.swift in Sources */,
 				D48BF1551E64EB5C00F62098 /* AppDelegate.swift in Sources */,
+				EFCDBB9C1E65F88E0053EFA2 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +307,7 @@
 				D48BF1681E64EB5C00F62098 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

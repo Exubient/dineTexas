@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bEc-ih-H1X">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,10 +40,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="01G-CN-2rO">
             <objects>
-                <viewController id="QOS-af-hWl" sceneMemberID="viewController">
+                <viewController id="QOS-af-hWl" customClass="MapViewController" customModule="dineTexas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sCE-Rh-1TF"/>
                         <viewControllerLayoutGuide type="bottom" id="Gm0-kW-kwa"/>
@@ -51,32 +52,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-ga-LCX">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOX-ga-LCX">
                                 <rect key="frame" x="77" y="72" width="221" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AI6-y9-cgU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AI6-y9-cgU">
                                 <rect key="frame" x="313" y="72" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="BnK-AY-55n"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbw-3O-WKc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbw-3O-WKc">
                                 <rect key="frame" x="16" y="72" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eSz-RG-kMt">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eSz-RG-kMt">
                                 <rect key="frame" x="0.0" y="110" width="375" height="508"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eSz-RG-kMt" secondAttribute="trailing" id="7KP-yt-9zj"/>
+                            <constraint firstItem="pbw-3O-WKc" firstAttribute="baseline" secondItem="AI6-y9-cgU" secondAttribute="baseline" id="DAp-ml-5zS"/>
+                            <constraint firstItem="AI6-y9-cgU" firstAttribute="leading" secondItem="cOX-ga-LCX" secondAttribute="trailing" constant="15" id="DFd-in-tAk"/>
+                            <constraint firstItem="eSz-RG-kMt" firstAttribute="top" secondItem="pbw-3O-WKc" secondAttribute="bottom" constant="8" id="GpA-mn-Tpf"/>
+                            <constraint firstItem="pbw-3O-WKc" firstAttribute="top" secondItem="cOX-ga-LCX" secondAttribute="top" id="NAh-qe-pwd"/>
+                            <constraint firstItem="cOX-ga-LCX" firstAttribute="leading" secondItem="pbw-3O-WKc" secondAttribute="trailing" constant="15" id="QUp-pl-s1l"/>
+                            <constraint firstItem="cOX-ga-LCX" firstAttribute="centerX" secondItem="eSz-RG-kMt" secondAttribute="centerX" id="cE4-lL-KDh"/>
+                            <constraint firstItem="AI6-y9-cgU" firstAttribute="trailing" secondItem="EOh-gA-HF5" secondAttribute="trailingMargin" id="gF5-3W-Sld"/>
+                            <constraint firstItem="Gm0-kW-kwa" firstAttribute="top" secondItem="eSz-RG-kMt" secondAttribute="bottom" id="lFb-Bi-frv"/>
+                            <constraint firstItem="pbw-3O-WKc" firstAttribute="top" secondItem="sCE-Rh-1TF" secondAttribute="bottom" constant="8" symbolic="YES" id="nTb-HB-VW6"/>
+                            <constraint firstItem="eSz-RG-kMt" firstAttribute="leading" secondItem="EOh-gA-HF5" secondAttribute="leading" id="qZd-HY-5xi"/>
+                            <constraint firstItem="pbw-3O-WKc" firstAttribute="leading" secondItem="EOh-gA-HF5" secondAttribute="leadingMargin" id="wir-Dh-Dpm"/>
+                            <constraint firstItem="pbw-3O-WKc" firstAttribute="bottom" secondItem="cOX-ga-LCX" secondAttribute="bottom" id="yd6-Tg-5E7"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aHn-wV-QjJ"/>
                     <connections>
+                        <outlet property="mapView" destination="eSz-RG-kMt" id="O6i-8n-Ugr"/>
                         <segue destination="Lzg-2m-5gv" kind="show" id="gfi-qg-W0V"/>
                     </connections>
                 </viewController>
@@ -412,10 +428,10 @@
             </objects>
             <point key="canvasLocation" x="876" y="1390"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="VaU-Uc-P2Y">
             <objects>
-                <viewController id="lMJ-hd-aTf" sceneMemberID="viewController">
+                <viewController title="Settings" id="lMJ-hd-aTf" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WYa-s9-9Bg"/>
                         <viewControllerLayoutGuide type="bottom" id="40k-VZ-y3K"/>
@@ -462,7 +478,6 @@
         <!--Item-->
         <scene sceneID="DXJ-HO-slq">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PDd-pA-eyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EBg-ka-j6f" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ICN-5v-ZK3"/>
                     <toolbarItems/>
@@ -475,6 +490,7 @@
                         <segue destination="OhF-pA-VBy" kind="relationship" relationship="rootViewController" id="451-BZ-EXf"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDd-pA-eyG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3236" y="2226.8365817091458"/>
         </scene>
@@ -510,10 +526,10 @@
             </objects>
             <point key="canvasLocation" x="4092" y="2238"/>
         </scene>
-        <!--Item-->
+        <!--SettingsNav-->
         <scene sceneID="7c0-c1-S26">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vgh-iT-Tey" sceneMemberID="viewController">
+                <navigationController title="SettingsNav" automaticallyAdjustsScrollViewInsets="NO" id="Vgh-iT-Tey" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="X3c-Dq-gl5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pNj-EM-1Nc">
@@ -532,6 +548,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Paz-ca-QFF"/>
-        <segue reference="A21-bD-CKR"/>
+        <segue reference="gfi-qg-W0V"/>
     </inferredMetricsTieBreakers>
 </document>
