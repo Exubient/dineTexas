@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="1159" y="1029"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome Screen-->
         <scene sceneID="mFg-Ju-5K6">
             <objects>
-                <viewController id="Aya-Fp-zyb" sceneMemberID="viewController">
+                <viewController title="Welcome Screen" id="Aya-Fp-zyb" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r9T-mH-qfM"/>
                         <viewControllerLayoutGuide type="bottom" id="9rp-3j-Feg"/>
@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="2124" y="-76.011994002998506"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Screen-->
         <scene sceneID="owL-OS-c01">
             <objects>
-                <viewController id="6Cx-hU-S0M" sceneMemberID="viewController">
+                <viewController title="Login Screen" id="6Cx-hU-S0M" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GQ0-7Z-aNV"/>
                         <viewControllerLayoutGuide type="bottom" id="n95-p2-NC0"/>
@@ -165,6 +165,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvB-bx-tpe">
+                                <rect key="frame" x="114" y="481" width="148" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="I Forgot My Passwrod"/>
+                                <connections>
+                                    <segue destination="Ybg-D1-YlL" kind="show" id="yw7-7j-tqP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -173,10 +181,49 @@
             </objects>
             <point key="canvasLocation" x="3564" y="339.58020989505252"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Password-->
+        <scene sceneID="Zvl-O1-beL">
+            <objects>
+                <viewController title="Forgot Password" id="Ybg-D1-YlL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zfk-3t-q08"/>
+                        <viewControllerLayoutGuide type="bottom" id="VId-Ad-Umd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yt2-gi-3Ep">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter your email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2I-l5-erd">
+                                <rect key="frame" x="98" y="138" width="178" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dg4-BV-lLF">
+                                <rect key="frame" x="98" y="212" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOc-bo-e4n">
+                                <rect key="frame" x="118" y="305" width="140" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Email me a reset link"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPb-xp-oos" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4876" y="58.920539730134934"/>
+        </scene>
+        <!--Registration Screen-->
         <scene sceneID="L7U-eU-eDN">
             <objects>
-                <viewController id="qGv-Mm-Kwc" sceneMemberID="viewController">
+                <viewController title="Registration Screen" id="qGv-Mm-Kwc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z7e-VU-63z"/>
                         <viewControllerLayoutGuide type="bottom" id="maD-p0-Kj9"/>
