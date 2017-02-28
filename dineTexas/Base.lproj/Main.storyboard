@@ -168,7 +168,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvB-bx-tpe">
                                 <rect key="frame" x="114" y="481" width="148" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="I Forgot My Passwrod"/>
+                                <state key="normal" title="I Forgot My Password"/>
                                 <connections>
                                     <segue destination="Ybg-D1-YlL" kind="show" id="yw7-7j-tqP"/>
                                 </connections>
