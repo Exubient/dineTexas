@@ -13,6 +13,7 @@
 		D48BF15D1E64EB5C00F62098 /* dineTexas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D48BF15B1E64EB5C00F62098 /* dineTexas.xcdatamodeld */; };
 		D48BF15F1E64EB5C00F62098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48BF15E1E64EB5C00F62098 /* Assets.xcassets */; };
 		D48BF1621E64EB5C00F62098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48BF1601E64EB5C00F62098 /* LaunchScreen.storyboard */; };
+		D4E881181E70D914002E80C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4E881171E70D914002E80C5 /* GoogleService-Info.plist */; };
 		EFCDBB9C1E65F88E0053EFA2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDBB9B1E65F88D0053EFA2 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		D48BF15E1E64EB5C00F62098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48BF1611E64EB5C00F62098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48BF1631E64EB5C00F62098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E881171E70D914002E80C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EFCDBB9B1E65F88D0053EFA2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				D48BF1601E64EB5C00F62098 /* LaunchScreen.storyboard */,
 				D48BF1631E64EB5C00F62098 /* Info.plist */,
 				D48BF15B1E64EB5C00F62098 /* dineTexas.xcdatamodeld */,
+				D4E881171E70D914002E80C5 /* GoogleService-Info.plist */,
 			);
 			path = dineTexas;
 			sourceTree = "<group>";
@@ -102,6 +105,7 @@
 				TargetAttributes = {
 					D48BF1501E64EB5C00F62098 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5P6K8U5WT6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -130,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48BF1621E64EB5C00F62098 /* LaunchScreen.storyboard in Resources */,
+				D4E881181E70D914002E80C5 /* GoogleService-Info.plist in Resources */,
 				D48BF15F1E64EB5C00F62098 /* Assets.xcassets in Resources */,
 				D48BF15A1E64EB5C00F62098 /* Main.storyboard in Resources */,
 			);
@@ -268,6 +273,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5P6K8U5WT6;
 				INFOPLIST_FILE = dineTexas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = private.dineTexas;
@@ -280,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5P6K8U5WT6;
 				INFOPLIST_FILE = dineTexas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = private.dineTexas;
