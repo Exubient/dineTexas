@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FD701951E7AA2E700EBCC07 /* LogonStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD701941E7AA2E700EBCC07 /* LogonStatus.swift */; };
 		D48BF1551E64EB5C00F62098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48BF1541E64EB5C00F62098 /* AppDelegate.swift */; };
-		D48BF1571E64EB5C00F62098 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48BF1561E64EB5C00F62098 /* ViewController.swift */; };
+		D48BF1571E64EB5C00F62098 /* LogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48BF1561E64EB5C00F62098 /* LogoViewController.swift */; };
 		D48BF15A1E64EB5C00F62098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48BF1581E64EB5C00F62098 /* Main.storyboard */; };
 		D48BF15D1E64EB5C00F62098 /* dineTexas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D48BF15B1E64EB5C00F62098 /* dineTexas.xcdatamodeld */; };
 		D48BF15F1E64EB5C00F62098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48BF15E1E64EB5C00F62098 /* Assets.xcassets */; };
@@ -18,9 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FD701941E7AA2E700EBCC07 /* LogonStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogonStatus.swift; sourceTree = "<group>"; };
 		D48BF1511E64EB5C00F62098 /* dineTexas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dineTexas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48BF1541E64EB5C00F62098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D48BF1561E64EB5C00F62098 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D48BF1561E64EB5C00F62098 /* LogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoViewController.swift; sourceTree = "<group>"; };
 		D48BF1591E64EB5C00F62098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D48BF15C1E64EB5C00F62098 /* dineTexas.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dineTexas.xcdatamodel; sourceTree = "<group>"; };
 		D48BF15E1E64EB5C00F62098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,7 +63,8 @@
 			isa = PBXGroup;
 			children = (
 				D48BF1541E64EB5C00F62098 /* AppDelegate.swift */,
-				D48BF1561E64EB5C00F62098 /* ViewController.swift */,
+				D48BF1561E64EB5C00F62098 /* LogoViewController.swift */,
+				1FD701941E7AA2E700EBCC07 /* LogonStatus.swift */,
 				EFCDBB9B1E65F88D0053EFA2 /* MapViewController.swift */,
 				D48BF1581E64EB5C00F62098 /* Main.storyboard */,
 				D48BF15E1E64EB5C00F62098 /* Assets.xcassets */,
@@ -148,9 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48BF15D1E64EB5C00F62098 /* dineTexas.xcdatamodeld in Sources */,
-				D48BF1571E64EB5C00F62098 /* ViewController.swift in Sources */,
+				D48BF1571E64EB5C00F62098 /* LogoViewController.swift in Sources */,
 				D48BF1551E64EB5C00F62098 /* AppDelegate.swift in Sources */,
 				EFCDBB9C1E65F88E0053EFA2 /* MapViewController.swift in Sources */,
+				1FD701951E7AA2E700EBCC07 /* LogonStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
