@@ -22,7 +22,7 @@ class LogonStatus: NSObject {
 //        EITHER VIA FIREBASE OR CORE DATA
 //        SET self.isAuthenticated to TRUE if authiticated, false otherwise
 //        FOR NOW YOU CAN HARDCODE true/false to segue to registration or app
-        self.isAuthenticated = true
+        self.isAuthenticated = false
     }
     
     func isAuthenticatedStatus() -> Bool {

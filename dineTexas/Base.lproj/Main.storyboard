@@ -392,7 +392,7 @@
         <!--Registration-->
         <scene sceneID="L7U-eU-eDN">
             <objects>
-                <viewController title="Registration" id="qGv-Mm-Kwc" sceneMemberID="viewController">
+                <viewController title="Registration" id="qGv-Mm-Kwc" customClass="RegistrationViewController" customModule="dineTexas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z7e-VU-63z"/>
                         <viewControllerLayoutGuide type="bottom" id="maD-p0-Kj9"/>
@@ -454,6 +454,9 @@
                                 <rect key="frame" x="124" y="495" width="127" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create an Account"/>
+                                <connections>
+                                    <action selector="createButtonHandler:" destination="qGv-Mm-Kwc" eventType="touchUpInside" id="ZX3-yk-NCI"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eBj-xr-tbe">
                                 <rect key="frame" x="185" y="150" width="149" height="30"/>
@@ -493,6 +496,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="confPassword" destination="U9X-kl-JlM" id="Fqv-ih-QRa"/>
+                        <outlet property="email" destination="3CT-yQ-iud" id="O1n-8E-ZEO"/>
+                        <outlet property="firstName" destination="eBj-xr-tbe" id="NeX-74-mf1"/>
+                        <outlet property="lastName" destination="ehG-gX-YcG" id="vHr-SO-NEj"/>
+                        <outlet property="password" destination="6fA-Jt-GTL" id="2sz-CV-CHD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FgY-Sz-RHY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
