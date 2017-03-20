@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28E1BCEA5CA30B070A1E95AB6E5820A5 /* Pods-dineTexas-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A31249D3AA663AB68ACF2CA0F92935 /* Pods-dineTexas-dummy.m */; };
+		5E1A4A3B867727795149D7981B938CAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		6E1EC72F3C77AAA8E79B2233ED7FF69F /* Pods-dineTexas-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE08609AAAB2DCDA316FE9E6A29C7C8F /* Pods-dineTexas-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11EB66DA5A9CA906B47EE2DAB39D946A /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		232D27EF012E7831BC185940F0EDB710 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		27C2FA58695674E43079C502EA314197 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		28E00910BE6EE58476D4BFB22FD9B0F6 /* Pods-dineTexas.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-dineTexas.modulemap"; sourceTree = "<group>"; };
+		2B4CCBFAA0F2D3702D0136E9496223A6 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		476EA65D64AB1F7D17F0B9B24CA32C55 /* Pods-dineTexas-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-dineTexas-frameworks.sh"; sourceTree = "<group>"; };
+		4C57A702042B21D0EC93B0CCE55EC077 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		517C8390C743E8138972F046A161122B /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		568974E6A572837E00C4AC9B837BDE04 /* Pods-dineTexas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dineTexas.release.xcconfig"; sourceTree = "<group>"; };
+		5C5EE653D995D25E438768E095EBA00D /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		954727C3F442916134E3F64B50BA8D71 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		985410819429FBD760E631565D829B55 /* Pods-dineTexas-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-dineTexas-resources.sh"; sourceTree = "<group>"; };
+		99A31249D3AA663AB68ACF2CA0F92935 /* Pods-dineTexas-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dineTexas-dummy.m"; sourceTree = "<group>"; };
+		9AC1C02B96C62AFA6B4A034AEDE4EC41 /* Pods-dineTexas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-dineTexas.debug.xcconfig"; sourceTree = "<group>"; };
+		CB1A130E22EA2F19F2991FD0081FC4BE /* Pods-dineTexas-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-dineTexas-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D623E6270445B6DA20E40D22C9C3CB5A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DADAB5D368E29FEF87460AEBDA3410FF /* Pods-dineTexas-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-dineTexas-acknowledgements.plist"; sourceTree = "<group>"; };
+		F01BE8E1A516D6ECCFE24DBC5674C8BE /* Pods_dineTexas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dineTexas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE08609AAAB2DCDA316FE9E6A29C7C8F /* Pods-dineTexas-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-dineTexas-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1781FC60E8D75E09A878F903E62C3B9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E1A4A3B867727795149D7981B938CAE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06061969D52EED6CA804A6BCAD40DE71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				954727C3F442916134E3F64B50BA8D71 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0642B579FDE4730CD17AB4C51B1C9E1F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCF89258953BC4504A8D351028E7F983 /* Pods-dineTexas */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		232A0C2965BD944705AFDCC292FAEA7F /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				8633E9D4CF7BCB091B63C226147393FF /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		36205C48C4EF365A03DD9EF28703A43E /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				ED32C4EBDB9A23E379FD2B1CC218B765 /* Frameworks */,
+			);
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5BCC489817A1853AA3D334BC1B2FF7A8 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				5CE347E97B7D2DCD28FB193E6326B9B8 /* Core */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		5CE347E97B7D2DCD28FB193E6326B9B8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4C57A702042B21D0EC93B0CCE55EC077 /* Firebase.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		761391969BAF09951C5A54A63AAA4B6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				517C8390C743E8138972F046A161122B /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				C6688EDDEF21F1062427B0B65BE9EFCC /* Pods */,
+				BC703E8D34791A65E87BA4678EB873D3 /* Products */,
+				0642B579FDE4730CD17AB4C51B1C9E1F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8633E9D4CF7BCB091B63C226147393FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B4CCBFAA0F2D3702D0136E9496223A6 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97052C51F94E6047C061A44107973361 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				FF37BE07D0632D31C67ABDF6F2A824AA /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		B356D7C630FD917FF4A8A23CB20A7A7E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5C5EE653D995D25E438768E095EBA00D /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B376289842D88B04AFA1E4E1F2D2D8EC /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				B356D7C630FD917FF4A8A23CB20A7A7E /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		B7F32925195C2BF4F6650F6E3E291AFC /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				27C2FA58695674E43079C502EA314197 /* FIRInstanceID.h */,
+				06061969D52EED6CA804A6BCAD40DE71 /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC703E8D34791A65E87BA4678EB873D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F01BE8E1A516D6ECCFE24DBC5674C8BE /* Pods_dineTexas.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCF89258953BC4504A8D351028E7F983 /* Pods-dineTexas */ = {
+			isa = PBXGroup;
+			children = (
+				D623E6270445B6DA20E40D22C9C3CB5A /* Info.plist */,
+				28E00910BE6EE58476D4BFB22FD9B0F6 /* Pods-dineTexas.modulemap */,
+				CB1A130E22EA2F19F2991FD0081FC4BE /* Pods-dineTexas-acknowledgements.markdown */,
+				DADAB5D368E29FEF87460AEBDA3410FF /* Pods-dineTexas-acknowledgements.plist */,
+				99A31249D3AA663AB68ACF2CA0F92935 /* Pods-dineTexas-dummy.m */,
+				476EA65D64AB1F7D17F0B9B24CA32C55 /* Pods-dineTexas-frameworks.sh */,
+				985410819429FBD760E631565D829B55 /* Pods-dineTexas-resources.sh */,
+				FE08609AAAB2DCDA316FE9E6A29C7C8F /* Pods-dineTexas-umbrella.h */,
+				9AC1C02B96C62AFA6B4A034AEDE4EC41 /* Pods-dineTexas.debug.xcconfig */,
+				568974E6A572837E00C4AC9B837BDE04 /* Pods-dineTexas.release.xcconfig */,
+			);
+			name = "Pods-dineTexas";
+			path = "Target Support Files/Pods-dineTexas";
+			sourceTree = "<group>";
+		};
+		C6688EDDEF21F1062427B0B65BE9EFCC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BCC489817A1853AA3D334BC1B2FF7A8 /* Firebase */,
+				232A0C2965BD944705AFDCC292FAEA7F /* FirebaseAnalytics */,
+				36205C48C4EF365A03DD9EF28703A43E /* FirebaseCore */,
+				B7F32925195C2BF4F6650F6E3E291AFC /* FirebaseInstanceID */,
+				B376289842D88B04AFA1E4E1F2D2D8EC /* GoogleInterchangeUtilities */,
+				97052C51F94E6047C061A44107973361 /* GoogleSymbolUtilities */,
+				E3367BDB30192BFA5367F46521B48544 /* GoogleUtilities */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E3367BDB30192BFA5367F46521B48544 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				761391969BAF09951C5A54A63AAA4B6F /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		ED32C4EBDB9A23E379FD2B1CC218B765 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11EB66DA5A9CA906B47EE2DAB39D946A /* FirebaseCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF37BE07D0632D31C67ABDF6F2A824AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				232D27EF012E7831BC185940F0EDB710 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AE5104D927723AE4B4EDD30579F233AA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E1EC72F3C77AAA8E79B2233ED7FF69F /* Pods-dineTexas-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5AD6CCA56425A6EEF18C4A71F8F72C24 /* Pods-dineTexas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F7B1CDC237520430F7AD0485405DF2C /* Build configuration list for PBXNativeTarget "Pods-dineTexas" */;
+			buildPhases = (
+				95282C1121CB6D663ED6789B651D0560 /* Sources */,
+				1781FC60E8D75E09A878F903E62C3B9B /* Frameworks */,
+				AE5104D927723AE4B4EDD30579F233AA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-dineTexas";
+			productName = "Pods-dineTexas";
+			productReference = F01BE8E1A516D6ECCFE24DBC5674C8BE /* Pods_dineTexas.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = BC703E8D34791A65E87BA4678EB873D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5AD6CCA56425A6EEF18C4A71F8F72C24 /* Pods-dineTexas */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95282C1121CB6D663ED6789B651D0560 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E1BCEA5CA30B070A1E95AB6E5820A5 /* Pods-dineTexas-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1C908C9E23B0214C9B9B55CCB6C90A02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3759E8975358A909AFB3C2D647F1007F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 568974E6A572837E00C4AC9B837BDE04 /* Pods-dineTexas.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-dineTexas/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-dineTexas/Pods-dineTexas.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_dineTexas;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		39CB17628A6906E6A25C3A9E016B8A8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC1C02B96C62AFA6B4A034AEDE4EC41 /* Pods-dineTexas.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-dineTexas/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-dineTexas/Pods-dineTexas.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_dineTexas;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A9E8533E615EA7FD02D27524E68EE149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9E8533E615EA7FD02D27524E68EE149 /* Debug */,
+				1C908C9E23B0214C9B9B55CCB6C90A02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F7B1CDC237520430F7AD0485405DF2C /* Build configuration list for PBXNativeTarget "Pods-dineTexas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39CB17628A6906E6A25C3A9E016B8A8A /* Debug */,
+				3759E8975358A909AFB3C2D647F1007F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
