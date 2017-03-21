@@ -10,17 +10,22 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "createSegue"{
+            let nextScene = segue.destination as? RegistrationViewController
+//            navigationItem.title = nil
+        }
+        if segue.identifier == "loginSegue"{
+            let nextScene = segue.destination as? LoginViewController
+//            navigationItem.title = nil
+        }
+    }
 
     /*
     // MARK: - Navigation

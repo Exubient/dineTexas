@@ -269,7 +269,8 @@
                                 <rect key="frame" x="123" y="279" width="129" height="30"/>
                                 <state key="normal" title="Create An Account"/>
                                 <connections>
-                                    <segue destination="qGv-Mm-Kwc" kind="show" id="YaK-4o-jn4"/>
+                                    <action selector="createClick:" destination="Aya-Fp-zyb" eventType="touchUpInside" id="5Yg-kv-gfb"/>
+                                    <segue destination="qGv-Mm-Kwc" kind="show" identifier="createSegue" id="YaK-4o-jn4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Dine Texas!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlm-sS-39T">
@@ -285,7 +286,8 @@
                                 <rect key="frame" x="168" y="399" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="6Cx-hU-S0M" kind="show" id="f6N-WY-gWB"/>
+                                    <action selector="LoginClick:" destination="Aya-Fp-zyb" eventType="touchUpInside" id="Pjh-jU-F4p"/>
+                                    <segue destination="6Cx-hU-S0M" kind="show" identifier="loginSegue" id="f6N-WY-gWB"/>
                                 </connections>
                             </button>
                         </subviews>
