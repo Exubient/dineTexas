@@ -10,8 +10,20 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "forgotPassword"{
+            let nextScene = segue.destination as? ForgotPasswordViewController
+            //            navigationItem.title = nil
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     }
