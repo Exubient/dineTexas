@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fkR-gH-bJw">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fkR-gH-bJw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -435,7 +435,7 @@
         <!--Registration-->
         <scene sceneID="L7U-eU-eDN">
             <objects>
-                <viewController title="Registration" id="qGv-Mm-Kwc" customClass="RegistrationViewController" customModule="dineTexas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Registration" id="qGv-Mm-Kwc" customClass="RegistrationVC" customModule="dineTexas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z7e-VU-63z"/>
                         <viewControllerLayoutGuide type="bottom" id="maD-p0-Kj9"/>
@@ -563,6 +563,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confPassword" destination="U9X-kl-JlM" id="AvL-Dt-hN3"/>
+                        <outlet property="email" destination="3CT-yQ-iud" id="DbS-aV-d0O"/>
+                        <outlet property="firstName" destination="eBj-xr-tbe" id="5fQ-Mj-hVC"/>
+                        <outlet property="lastName" destination="ehG-gX-YcG" id="di5-uJ-9cT"/>
+                        <outlet property="password" destination="6fA-Jt-GTL" id="19c-m6-Hv4"/>
                         <outlet property="view" destination="8ON-Zn-Ecz" id="3Km-XH-4df"/>
                     </connections>
                 </viewController>
@@ -836,7 +841,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wts-LT-9Id" id="jfb-VT-g9f">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

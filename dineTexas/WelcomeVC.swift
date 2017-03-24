@@ -18,7 +18,7 @@ class WelcomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "createSegue"{
-            let nextScene = segue.destination as? RegistrationViewController
+            let nextScene = segue.destination as? RegistrationVC
 //            navigationItem.title = nil
         }
         if segue.identifier == "loginSegue"{
