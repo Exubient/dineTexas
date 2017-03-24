@@ -26,6 +26,7 @@
 		D48BF15F1E64EB5C00F62098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48BF15E1E64EB5C00F62098 /* Assets.xcassets */; };
 		D48BF1621E64EB5C00F62098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48BF1601E64EB5C00F62098 /* LaunchScreen.storyboard */; };
 		D4E881181E70D914002E80C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4E881171E70D914002E80C5 /* GoogleService-Info.plist */; };
+		EF6AA5BE1E85DD59006334F2 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */; };
 		EFCDBB9C1E65F88E0053EFA2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDBB9B1E65F88D0053EFA2 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		D48BF1611E64EB5C00F62098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48BF1631E64EB5C00F62098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4E881171E70D914002E80C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		EFCDBB9B1E65F88D0053EFA2 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				D45FFC391E80A1CE00372884 /* SettingVC.swift */,
 				D45FFC3B1E80A1D900372884 /* RadiusSettingVC.swift */,
 				D45FFC3D1E80A22900372884 /* MainTableViewController.swift */,
+				EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */,
 			);
 			name = MainApp;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				D45FFC381E80A1A200372884 /* MenuVC.swift in Sources */,
 				D45729301E809CF400152687 /* RegistrationVC.swift in Sources */,
 				D45729391E80A13B00152687 /* GlkVC.swift in Sources */,
+				EF6AA5BE1E85DD59006334F2 /* AddLocationViewController.swift in Sources */,
 				EFCDBB9C1E65F88E0053EFA2 /* MapVC.swift in Sources */,
 				1FD701951E7AA2E700EBCC07 /* LogonStatus.swift in Sources */,
 				D45FFC3E1E80A22900372884 /* MainTableViewController.swift in Sources */,
