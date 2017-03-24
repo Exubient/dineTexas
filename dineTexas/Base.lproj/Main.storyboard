@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fkR-gH-bJw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,31 +22,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q2-2x-9Ye">
-                                <rect key="frame" x="166" y="323" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="C38-7X-pRr"/>
-                                    <constraint firstAttribute="height" constant="21" id="pn2-vk-fFg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NvR-0o-cAl">
+                                <rect key="frame" x="0.0" y="230" width="375" height="206"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11370813101530075" green="0.11373542994260788" blue="0.11370643228292465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1q2-2x-9Ye" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fK6-PL-CfU"/>
-                            <constraint firstItem="1q2-2x-9Ye" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zGb-Up-Z3A"/>
+                            <constraint firstItem="NvR-0o-cAl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aC1-rf-KCE"/>
+                            <constraint firstItem="NvR-0o-cAl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ooc-kW-OaJ"/>
+                            <constraint firstItem="NvR-0o-cAl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="210" id="paX-xG-fXz"/>
+                            <constraint firstItem="NvR-0o-cAl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="skH-gt-hBu"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logo" destination="NvR-0o-cAl" id="KxD-7e-8cA"/>
                         <segue destination="fkR-gH-bJw" kind="show" identifier="logoToRegistration" animates="NO" id="DUP-t3-grB"/>
                         <segue destination="bEc-ih-H1X" kind="show" identifier="logoToApp" animates="NO" id="Paz-ca-QFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-78" y="139"/>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
         </scene>
         <!--Map-->
         <scene sceneID="01G-CN-2rO">
