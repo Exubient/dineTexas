@@ -19,6 +19,7 @@ class RegistrationVC: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var confPassword: UITextField!
     var alertController:UIAlertController? = nil
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,9 @@ class RegistrationVC: UIViewController {
                 displayAlert ("Password and confirmed Password do not match. Try again")
             }
             else {
+                defaults.set(email.text, forKey: "Email")
+                defaults.set(password.text, forKey: "Password")
+                defaults.set(true, forKey: "Login")
                 savePerson(firstName:firstName.text!, lastName:lastName.text!, email:email.text!, password: password.text!)
                 displayAlert ("Account created!")
             }

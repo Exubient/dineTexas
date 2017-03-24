@@ -16,13 +16,14 @@ import UIKit
 
 class LogonStatus: NSObject {
     fileprivate var isAuthenticated:Bool
+    let defaults = UserDefaults.standard
     
     override init(){
 //        THIS IS WHERE YOU CHECK TO SEE IF USER IS LOGGED IN
 //        EITHER VIA FIREBASE OR CORE DATA
 //        SET self.isAuthenticated to TRUE if authiticated, false otherwise
 //        FOR NOW YOU CAN HARDCODE true/false to segue to registration or app
-        self.isAuthenticated = false
+        self.isAuthenticated = defaults.bool(forKey: "Login")
     }
     
     func isAuthenticatedStatus() -> Bool {

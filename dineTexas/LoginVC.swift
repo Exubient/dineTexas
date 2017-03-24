@@ -11,8 +11,9 @@ import UIKit
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
-    
     @IBOutlet weak var password: UITextField!
+    var alertController:UIAlertController? = nil
+    let defaults = UserDefaults.standard
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -36,6 +37,42 @@ class LoginViewController: UIViewController {
     func func_tap(gesture: UITapGestureRecognizer) {
         email.resignFirstResponder()
         password.resignFirstResponder()
+    }
+    
+    @IBAction func loginButton(_ sender: Any) {
+        if (email.text == "" || password.text == ""){
+            displayAlert ("You must enter a value for all fields.")
+        }
+        else {
+            // if valid email and password, sequeue to map
+            print ("performSegue to map")
+            checkInput()
+            
+        }
+    }
+    
+    func checkInput(){
+        let emailDefault:String = defaults.string(forKey: "Email")!
+        let passwordDefault:String = defaults.string(forKey: "Password")!
+        if(emailDefault != email.text || passwordDefault != password.text){
+            displayAlert("Invalid email or password. Try again.")
+            //checkInput()
+        }
+        else {
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "loginToMap", sender: nil)
+            }
+        }
+    }
+    
+    func displayAlert (_ message: String){
+        self.alertController = UIAlertController(title: message, message: "", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in
+            print("Ok Button Pressed 1");
+        }
+        self.alertController!.addAction(OKAction)
+        self.present(alertController!, animated: true, completion: nil)
     }
     
     
