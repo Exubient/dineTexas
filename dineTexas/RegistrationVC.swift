@@ -6,6 +6,9 @@
 //  Copyright © 2017 Hyun Joong Kim. All rights reserved.
 //
 
+
+
+
 import UIKit
 import CoreData
 
@@ -20,12 +23,30 @@ class RegistrationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        //no auto-fill
+        firstName.autocorrectionType = UITextAutocorrectionType.no
+        lastName.autocorrectionType = UITextAutocorrectionType.no
+        email.autocorrectionType = UITextAutocorrectionType.no
+        password.autocorrectionType = UITextAutocorrectionType.no
+        confPassword.autocorrectionType = UITextAutocorrectionType.no
+        
+        //add func_tap to viewDidLoad
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
+        self.view.addGestureRecognizer(tap)
     }
+    
+    //tap outside to remove keyboard
+    func func_tap(gesture: UITapGestureRecognizer) {
+        firstName.resignFirstResponder()
+        lastName.resignFirstResponder()
+        email.resignFirstResponder()
+        password.resignFirstResponder()
+        confPassword.resignFirstResponder()
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
