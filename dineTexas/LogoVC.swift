@@ -10,6 +10,7 @@ import UIKit
 
 class LogoViewController: UIViewController {
     var LogonStatusInstance:LogonStatus = LogonStatus()
+    let defaults = UserDefaults.standard
     
     @IBOutlet weak var logo: UIImageView!
     override func viewDidLoad() {
@@ -45,9 +46,10 @@ class LogoViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        let isLoggedIn = LogonStatusInstance.isAuthenticatedStatus()
+        print ("\(defaults.bool(forKey: "Login"))")
+        let isLoggedIn = LogonStatusInstance.isAuthenticatedStatus()
 //        just to check constrainst:)   
-        let isLoggedIn = true
+//        let isLoggedIn = true
 //        Sleep for 2 sec to show logo
         sleep(5)
         if (isLoggedIn) {
