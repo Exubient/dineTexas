@@ -10,7 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var email: UITextField!
     
+    @IBOutlet weak var password: UITextField!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -22,11 +24,21 @@ class LoginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        email.autocorrectionType = UITextAutocorrectionType.no
+        password.autocorrectionType = UITextAutocorrectionType.no
         
-        
-
-        // Do any additional setup after loading the view.
+        //add func_tap to viewDidLoad
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
+        self.view.addGestureRecognizer(tap)
     }
+    
+    //tap outside to remove keyboard
+    func func_tap(gesture: UITapGestureRecognizer) {
+        email.resignFirstResponder()
+        password.resignFirstResponder()
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

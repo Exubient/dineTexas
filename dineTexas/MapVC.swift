@@ -12,11 +12,20 @@ import CoreLocation
 
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var searchBar: UITextField!
     let locManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.autocorrectionType = UITextAutocorrectionType.no
 
-        // Do any additional setup after loading the view.
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    func func_tap(gesture: UITapGestureRecognizer) {
+        searchBar.resignFirstResponder()
+
     }
 
     override func didReceiveMemoryWarning() {

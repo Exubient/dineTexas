@@ -19,11 +19,10 @@ class LogoViewController: UIViewController {
         self.logo.alpha = 0.0;
         
         // Fade the logo into view
-        
         UIView.animate(withDuration: 2.0, delay: 0.5, options: .curveLinear,
-                       animations: {
-                        self.logo.alpha = 1.0
-        }
+            animations: {
+                self.logo.alpha = 1.0
+            }
         )
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,7 +31,7 @@ class LogoViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
 //        let isLoggedIn = LogonStatusInstance.isAuthenticatedStatus()
 //        just to check constrainst:)   
-        let isLoggedIn = false
+        let isLoggedIn = true
 //        Sleep for 2 sec to show logo
         sleep(5)
         if (isLoggedIn) {
