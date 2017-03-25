@@ -11,7 +11,6 @@ import UIKit
 class LogoViewController: UIViewController {
     var LogonStatusInstance:LogonStatus = LogonStatus()
     let defaults = UserDefaults.standard
-    
     @IBOutlet weak var logo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +32,6 @@ class LogoViewController: UIViewController {
                         }
         }
         )
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     func fadeOut() {
@@ -64,6 +61,7 @@ class LogoViewController: UIViewController {
             }
         }
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

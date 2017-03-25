@@ -1,14 +1,14 @@
 Implementation Contributions:
-Matt Davidson - Worked on the segues from each story board as well as defined the general colorbase. Also created this README
+Matt Davidson - Worked on the segues from each story board as well as defined the general color base. He also created this README.
 Henry Kim - Worked on Visual constraints for the whole project and began working on the firebase implementation
-John Madden - Logo animation and picture. Implemeneted Registration Feature as well as hooked it up to Core Data
+John Madden - Logo animation and picture. Implemented Registration Feature as well as hooked it up to Core Data
 
-Grading Level: Same grade for all members
+Grading Level: Same grade for all members.
 
 Differences:
-In the Applciation idea paper we noted that the user will need to "Press a button to segue to main view" while they are viewing the logo. It is more visually appealing and less user interaction for it to auto segue to either the login screen if they aren't logged in, or to the main app if they are authenticated.
+In the App Idea Paper we noted that the user will need to "Press a button to segue to main view" while they are viewing the logo. It is more visually appealing and less user interaction for it to auto segue to either the login screen if they aren't logged in, or to the main app if they are authenticated.
 
 Special Instructions:
-1. If you create an account and log into the app, then close and re-open the app, it will rembemer your authentication state and instead of going back to the login/regisitation screen it will connect you to the app.
+1. If you create an account and log into the app, then close and re-open the app, it will remember your authentication state and instead of going back to the login/registration screen it will connect you to the app. While there is a setting to disable this feature, it has not been implemented yet.
 
-2. We got started a little early on some beta stuff, while it is on the story board it is not accessable to the user yet.
+2. We started a little early on some beta implementations. While some of these view controllers are on the storyboard they are not accessible to the user yet.

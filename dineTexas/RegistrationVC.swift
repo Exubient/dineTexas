@@ -6,9 +6,6 @@
 //  Copyright © 2017 Hyun Joong Kim. All rights reserved.
 //
 
-
-
-
 import UIKit
 import CoreData
 
@@ -50,15 +47,12 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         password.resignFirstResponder()
         confPassword.resignFirstResponder()
     }
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    
     @IBAction func createButtonHandler(_ sender: Any) {
-        
         if (firstName.text == "" || lastName.text == "" || email.text == "" || password.text == "" ||
             confPassword.text == ""){
             displayAlert ("You must enter a value for all fields.")
@@ -79,7 +73,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     
     func displayAlert (_ message: String){
         self.alertController = UIAlertController(title: message, message: "", preferredStyle: UIAlertControllerStyle.alert)
-        
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in
             print("Ok Button Pressed 1");
         }
@@ -87,13 +80,10 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         self.present(alertController!, animated: true, completion: nil)
     }
     
-    
-    
     // Saves this person created to the core data. Much of this
     // code has been replicated from the code given in class, such as
     // the error checking for checking the managedContext.
     func savePerson(firstName: String, lastName: String, email: String, password: String) {
-        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let managedContext = appDelegate.persistentContainer.viewContext
         
@@ -117,7 +107,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
             abort()
         }
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -128,15 +117,4 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

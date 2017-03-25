@@ -16,13 +16,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     let defaults = UserDefaults.standard
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "forgotPassword"{
             let nextScene = segue.destination as? ForgotPasswordViewController
             //            navigationItem.title = nil
         }
-        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         email.autocorrectionType = UITextAutocorrectionType.no
@@ -49,7 +48,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             // if valid email and password, sequeue to map
             print ("performSegue to map")
             checkInput()
-            
         }
     }
     
@@ -69,7 +67,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func displayAlert (_ message: String){
         self.alertController = UIAlertController(title: message, message: "", preferredStyle: UIAlertControllerStyle.alert)
-        
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in
             print("Ok Button Pressed 1");
         }
@@ -77,8 +74,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.present(alertController!, animated: true, completion: nil)
     }
     
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -92,15 +87,4 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

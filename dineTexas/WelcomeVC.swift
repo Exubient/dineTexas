@@ -16,7 +16,6 @@ class WelcomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "createSegue"{
             let nextScene = segue.destination as? RegistrationVC
 //            navigationItem.title = nil
@@ -26,15 +25,4 @@ class WelcomeViewController: UIViewController {
 //            navigationItem.title = nil
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

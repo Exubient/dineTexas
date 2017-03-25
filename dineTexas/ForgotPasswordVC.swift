@@ -28,7 +28,6 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     
     func displayAlert (_ message: String){
         self.alertController = UIAlertController(title: message, message: "", preferredStyle: UIAlertControllerStyle.alert)
-        
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in
             print("Ok Button Pressed 1");
         }
@@ -44,14 +43,4 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

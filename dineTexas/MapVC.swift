@@ -19,14 +19,12 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.autocorrectionType = UITextAutocorrectionType.no
-
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
         self.view.addGestureRecognizer(tap)
     }
     
     func func_tap(gesture: UITapGestureRecognizer) {
         searchBar.resignFirstResponder()
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,23 +35,13 @@ class MapViewController: UIViewController {
     @IBAction func btn(_ sender: Any) {
         displayAlert("This feature will be implemented in beta")
     }
+    
     func displayAlert (_ message: String){
         self.alertController = UIAlertController(title: message, message: "", preferredStyle: UIAlertControllerStyle.alert)
-        
         let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in
             print("Ok Button Pressed 1");
         }
         self.alertController!.addAction(OKAction)
         self.present(alertController!, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
