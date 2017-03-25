@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingViewController: UIViewController {
-
+    var alertController:UIAlertController? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +21,19 @@ class SettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func updateSettings(_ sender: Any) {
+        displayAlert("The update settings feature will be implemented in beta")
+    }
+    
+    func displayAlert (_ message: String){
+        self.alertController = UIAlertController(title: message, message: "", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in
+            print("Ok Button Pressed 1");
+        }
+        self.alertController!.addAction(OKAction)
+        self.present(alertController!, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 
