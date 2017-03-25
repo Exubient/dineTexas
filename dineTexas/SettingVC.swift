@@ -8,11 +8,15 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class SettingViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var greenInput: UITextField!
+    @IBOutlet weak var orangeInput: UITextField!
+    
     var alertController:UIAlertController? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        greenInput.delegate = self
+        orangeInput.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +37,15 @@ class SettingViewController: UIViewController {
         }
         self.alertController!.addAction(OKAction)
         self.present(alertController!, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     /*
     // MARK: - Navigation

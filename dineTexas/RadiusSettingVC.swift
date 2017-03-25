@@ -8,11 +8,12 @@
 
 import UIKit
 
-class RadiusSettingViewController: UIViewController {
+class RadiusSettingViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var increaseRadius: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        increaseRadius.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -21,6 +22,14 @@ class RadiusSettingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
     /*
     // MARK: - Navigation

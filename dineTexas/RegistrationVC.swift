@@ -12,7 +12,7 @@
 import UIKit
 import CoreData
 
-class RegistrationVC: UIViewController {
+class RegistrationVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -34,6 +34,12 @@ class RegistrationVC: UIViewController {
         //add func_tap to viewDidLoad
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
         self.view.addGestureRecognizer(tap)
+        
+        firstName.delegate = self
+        lastName.delegate = self
+        email.delegate = self
+        password.delegate = self
+        confPassword.delegate = self
     }
     
     //tap outside to remove keyboard
@@ -114,8 +120,14 @@ class RegistrationVC: UIViewController {
         
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
     /*
      // MARK: - Navigation

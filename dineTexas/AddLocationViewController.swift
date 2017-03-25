@@ -8,11 +8,19 @@
 
 import UIKit
 
-class AddLocationViewController: UIViewController {
+class AddLocationViewController: UIViewController, UITextFieldDelegate {
     var alertController:UIAlertController? = nil
+    
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var address: UITextField!
+    @IBOutlet weak var hours: UITextField!
+    @IBOutlet weak var website: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        name.delegate = self
+        address.delegate = self
+        hours.delegate = self
+        website.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +41,15 @@ class AddLocationViewController: UIViewController {
         }
         self.alertController!.addAction(OKAction)
         self.present(alertController!, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     /*
     // MARK: - Navigation

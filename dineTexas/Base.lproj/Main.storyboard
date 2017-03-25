@@ -365,6 +365,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="MAB-nr-Ow1"/>
+                    <connections>
+                        <outlet property="address" destination="9VD-HW-lv1" id="xaq-Qr-KSb"/>
+                        <outlet property="hours" destination="tXe-td-7Ab" id="Rvz-jy-bae"/>
+                        <outlet property="name" destination="E6D-GI-ogD" id="Eyg-2j-GWA"/>
+                        <outlet property="website" destination="S04-U2-n2B" id="K2X-Re-QnR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j0v-Uq-bz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -581,6 +587,9 @@
                             <constraint firstItem="oOc-bo-e4n" firstAttribute="top" secondItem="dg4-BV-lLF" secondAttribute="bottom" constant="62" id="tc9-VB-BBW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forgotPassword" destination="dg4-BV-lLF" id="LEF-3N-1sx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPb-xp-oos" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -891,6 +900,10 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="jF3-DV-AXX"/>
+                    <connections>
+                        <outlet property="greenInput" destination="dH8-fv-tYp" id="fV5-4r-9HG"/>
+                        <outlet property="orangeInput" destination="diK-Jl-q2h" id="Bqd-g9-Pjl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNV-aV-CGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -966,6 +979,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Radius Setting" id="gr6-Xg-i1g"/>
+                    <connections>
+                        <outlet property="increaseRadius" destination="TCD-Jg-u9e" id="kUA-It-LWI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwo-A1-CHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1074,7 +1090,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Paz-ca-QFF"/>
+        <segue reference="CW8-BV-pVi"/>
         <segue reference="m6x-Yz-meH"/>
         <segue reference="A21-bD-CKR"/>
     </inferredMetricsTieBreakers>

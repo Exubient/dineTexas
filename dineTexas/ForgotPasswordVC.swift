@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ForgotPasswordViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var forgotPassword: UITextField!
     var alertController:UIAlertController? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        forgotPassword.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +34,15 @@ class ForgotPasswordViewController: UIViewController {
         }
         self.alertController!.addAction(OKAction)
         self.present(alertController!, animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     /*
     // MARK: - Navigation
