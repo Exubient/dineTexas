@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -46,10 +47,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         else {
             // if valid email and password, sequeue to map
+            FIRAuth.auth()?.signIn(withEmail: self.email.text!, password: self.password.text!, completion: { (user, error) in
+                ///
+                if error == nil {
+                    
+//                    NSUserDefaults.standardUserDefaults().setObject(email, forKey: "email???")
+//                    NSUserDefaults.standardUserDefaults().setObject(password, forKey: "password???")
+                    
+                } else {
+                    
+                    print("====== ERROR ======")
+                    return
+                    }
+                })
+            }
+
+            
             print ("performSegue to map")
             checkInput()
         }
-    }
     
     func checkInput(){
         let emailDefault:String = defaults.string(forKey: "Email")!
