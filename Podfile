@@ -6,5 +6,6 @@ target 'dineTexas' do
   use_frameworks!
 
   # Pods for dineTexas
-pod ‘Firebase/Core’
+  pod ‘Firebase’
+  pod ‘Firebase/Core’
 end

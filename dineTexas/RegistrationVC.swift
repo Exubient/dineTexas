@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 class RegistrationVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var firstName: UITextField!

@@ -22,8 +22,30 @@ class AddLocationViewController: UIViewController, UITextFieldDelegate {
         address.delegate = self
         hours.delegate = self
         website.delegate = self
+
+        name.autocorrectionType = UITextAutocorrectionType.no
+        address.autocorrectionType = UITextAutocorrectionType.no
+        hours.autocorrectionType = UITextAutocorrectionType.no
+        website.autocorrectionType = UITextAutocorrectionType.no
+
         // Do any additional setup after loading the view.
-    }
+
+    
+    //add func_tap to viewDidLoad
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
+        self.view.addGestureRecognizer(tap)
+}
+
+//tap outside to remove keyboard
+func func_tap(gesture: UITapGestureRecognizer) {
+    name.resignFirstResponder()
+    address.resignFirstResponder()
+    hours.resignFirstResponder()
+    website.resignFirstResponder()
+}
+
+
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1FD701951E7AA2E700EBCC07 /* LogonStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD701941E7AA2E700EBCC07 /* LogonStatus.swift */; };
+		59D081E8C8B2C947D03087F3 /* Pods_dineTexas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CBC292706988B4CBC9500 /* Pods_dineTexas.framework */; };
 		D457292B1E809C8200152687 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457292A1E809C8200152687 /* WelcomeVC.swift */; };
 		D45729301E809CF400152687 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457292F1E809CF400152687 /* RegistrationVC.swift */; };
 		D45729331E809D9C00152687 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45729321E809D9C00152687 /* LoginVC.swift */; };
@@ -31,7 +32,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17151DAC14AEC0DFFE4EDC22 /* Pods-dineTexas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dineTexas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dineTexas/Pods-dineTexas.debug.xcconfig"; sourceTree = "<group>"; };
 		1FD701941E7AA2E700EBCC07 /* LogonStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogonStatus.swift; sourceTree = "<group>"; };
+		372CBC292706988B4CBC9500 /* Pods_dineTexas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dineTexas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9092C066E5D1A9B6D5A441 /* Pods-dineTexas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dineTexas.release.xcconfig"; path = "Pods/Target Support Files/Pods-dineTexas/Pods-dineTexas.release.xcconfig"; sourceTree = "<group>"; };
 		D457292A1E809C8200152687 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		D457292F1E809CF400152687 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		D45729321E809D9C00152687 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -61,12 +65,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59D081E8C8B2C947D03087F3 /* Pods_dineTexas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22770E4E8A1D0083CDDBABBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17151DAC14AEC0DFFE4EDC22 /* Pods-dineTexas.debug.xcconfig */,
+				BC9092C066E5D1A9B6D5A441 /* Pods-dineTexas.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D457292C1E809C8A00152687 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +134,8 @@
 				D48BF1531E64EB5C00F62098 /* dineTexas */,
 				D48A88E01E8097B7004C8678 /* Resources */,
 				D48BF1521E64EB5C00F62098 /* Products */,
+				22770E4E8A1D0083CDDBABBB /* Pods */,
+				D5EA88F9E76861797346A8AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,6 +160,14 @@
 			path = dineTexas;
 			sourceTree = "<group>";
 		};
+		D5EA88F9E76861797346A8AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				372CBC292706988B4CBC9500 /* Pods_dineTexas.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D48BF1661E64EB5C00F62098 /* Build configuration list for PBXNativeTarget "dineTexas" */;
 			buildPhases = (
+				FD808833F45FA4F9B09AD50F /* [CP] Check Pods Manifest.lock */,
 				D48BF14D1E64EB5C00F62098 /* Sources */,
 				D48BF14E1E64EB5C00F62098 /* Frameworks */,
 				D48BF14F1E64EB5C00F62098 /* Resources */,
+				37A42544E1AF5C7A4F296353 /* [CP] Embed Pods Frameworks */,
+				D671F46BD8DC0ECF18487462 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +239,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37A42544E1AF5C7A4F296353 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dineTexas/Pods-dineTexas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D671F46BD8DC0ECF18487462 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-dineTexas/Pods-dineTexas-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD808833F45FA4F9B09AD50F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D48BF14D1E64EB5C00F62098 /* Sources */ = {
@@ -354,6 +429,7 @@
 		};
 		D48BF1671E64EB5C00F62098 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17151DAC14AEC0DFFE4EDC22 /* Pods-dineTexas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -367,6 +443,7 @@
 		};
 		D48BF1681E64EB5C00F62098 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9092C066E5D1A9B6D5A441 /* Pods-dineTexas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
