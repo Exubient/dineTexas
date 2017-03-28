@@ -8,4 +8,6 @@ target 'dineTexas' do
   # Pods for dineTexas
   pod ‘Firebase’
   pod ‘Firebase/Core’
+  pod 'Firebase/Auth'
+
 end

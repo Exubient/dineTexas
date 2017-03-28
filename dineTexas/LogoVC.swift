@@ -46,7 +46,7 @@ class LogoViewController: UIViewController {
         print ("\(defaults.bool(forKey: "Login"))")
 //        let isLoggedIn = LogonStatusInstance.isAuthenticatedStatus()
 //        just to check constrainst:)
-        let isLoggedIn = true
+        let isLoggedIn = false
 //        Sleep for 2 sec to show logo
         sleep(5)
         if (isLoggedIn) {

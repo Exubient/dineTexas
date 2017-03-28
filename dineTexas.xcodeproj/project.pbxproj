@@ -26,6 +26,7 @@
 		D48BF15D1E64EB5C00F62098 /* dineTexas.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D48BF15B1E64EB5C00F62098 /* dineTexas.xcdatamodeld */; };
 		D48BF15F1E64EB5C00F62098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D48BF15E1E64EB5C00F62098 /* Assets.xcassets */; };
 		D48BF1621E64EB5C00F62098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48BF1601E64EB5C00F62098 /* LaunchScreen.storyboard */; };
+		D4D8DEC71E8ADEA500B6DF08 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8DEC61E8ADEA500B6DF08 /* AdSupport.framework */; };
 		D4E881181E70D914002E80C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4E881171E70D914002E80C5 /* GoogleService-Info.plist */; };
 		EF6AA5BE1E85DD59006334F2 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */; };
 		EFCDBB9C1E65F88E0053EFA2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDBB9B1E65F88D0053EFA2 /* MapVC.swift */; };
@@ -55,6 +56,8 @@
 		D48BF15E1E64EB5C00F62098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D48BF1611E64EB5C00F62098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D48BF1631E64EB5C00F62098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D8DEC51E8AD6C400B6DF08 /* dineTexas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dineTexas.entitlements; sourceTree = "<group>"; };
+		D4D8DEC61E8ADEA500B6DF08 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		D4E881171E70D914002E80C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		EFCDBB9B1E65F88D0053EFA2 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4D8DEC71E8ADEA500B6DF08 /* AdSupport.framework in Frameworks */,
 				59D081E8C8B2C947D03087F3 /* Pods_dineTexas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +154,7 @@
 		D48BF1531E64EB5C00F62098 /* dineTexas */ = {
 			isa = PBXGroup;
 			children = (
+				D4D8DEC51E8AD6C400B6DF08 /* dineTexas.entitlements */,
 				D48BF1541E64EB5C00F62098 /* AppDelegate.swift */,
 				1FD701941E7AA2E700EBCC07 /* LogonStatus.swift */,
 				D48BF1581E64EB5C00F62098 /* Main.storyboard */,
@@ -163,6 +168,7 @@
 		D5EA88F9E76861797346A8AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4D8DEC61E8ADEA500B6DF08 /* AdSupport.framework */,
 				372CBC292706988B4CBC9500 /* Pods_dineTexas.framework */,
 			);
 			name = Frameworks;
@@ -203,7 +209,13 @@
 				TargetAttributes = {
 					D48BF1501E64EB5C00F62098 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5P6K8U5WT6;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -432,7 +444,7 @@
 			baseConfigurationReference = 17151DAC14AEC0DFFE4EDC22 /* Pods-dineTexas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5P6K8U5WT6;
 				INFOPLIST_FILE = dineTexas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = private.dineTexas;
@@ -446,7 +458,7 @@
 			baseConfigurationReference = BC9092C066E5D1A9B6D5A441 /* Pods-dineTexas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5P6K8U5WT6;
 				INFOPLIST_FILE = dineTexas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = private.dineTexas;

@@ -21,7 +21,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         //no auto-fill
         firstName.autocorrectionType = UITextAutocorrectionType.no
         lastName.autocorrectionType = UITextAutocorrectionType.no
@@ -67,6 +67,16 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
                 defaults.set(password.text, forKey: "Password")
                 defaults.set(true, forKey: "Login")
                 savePerson(firstName:firstName.text!, lastName:lastName.text!, email:email.text!, password: password.text!)
+                
+                //firebase registration
+                //        FIRAuth.auth()?.createUser(withEmail: self.email.text!, password: self.password.text!)
+                
+                
+                FIRAuth.auth()?.createUser(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
+                    // ...
+                }
+                
+                
                 displayAlert ("Account created!")
             }
         }
@@ -108,6 +118,7 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
             abort()
         }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
