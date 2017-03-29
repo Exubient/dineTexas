@@ -67,16 +67,10 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
                 defaults.set(password.text, forKey: "Password")
                 defaults.set(true, forKey: "Login")
                 savePerson(firstName:firstName.text!, lastName:lastName.text!, email:email.text!, password: password.text!)
-                
-                //firebase registration
-                //        FIRAuth.auth()?.createUser(withEmail: self.email.text!, password: self.password.text!)
-                
-                
+                //Firebase Sign Up
                 FIRAuth.auth()?.createUser(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
                     // ...
                 }
-                
-                
                 displayAlert ("Account created!")
             }
         }

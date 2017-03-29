@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var forgotPassword: UITextField!
@@ -24,6 +25,12 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func forgotEmailBtn(_ sender: Any) {
         displayAlert("Please check you email for a reset link")
+        
+        FIRAuth.auth()?.sendPasswordReset(withEmail: forgotPassword.text!) { error in
+            // Your code here
+        }
+        
+        
     }
     
     func displayAlert (_ message: String){
