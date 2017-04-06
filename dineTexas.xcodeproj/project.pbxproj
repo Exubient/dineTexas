@@ -19,6 +19,7 @@
 		D45FFC3A1E80A1CE00372884 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FFC391E80A1CE00372884 /* SettingVC.swift */; };
 		D45FFC3C1E80A1D900372884 /* RadiusSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FFC3B1E80A1D900372884 /* RadiusSettingVC.swift */; };
 		D45FFC3E1E80A22900372884 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45FFC3D1E80A22900372884 /* MainTableViewController.swift */; };
+		D4682F031E95D99A00A5586C /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4682F021E95D99A00A5586C /* Location.swift */; };
 		D48A88E41E8097DB004C8678 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = D48A88E31E8097DB004C8678 /* logo.png */; };
 		D48BF1551E64EB5C00F62098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48BF1541E64EB5C00F62098 /* AppDelegate.swift */; };
 		D48BF1571E64EB5C00F62098 /* LogoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48BF1561E64EB5C00F62098 /* LogoVC.swift */; };
@@ -47,6 +48,7 @@
 		D45FFC391E80A1CE00372884 /* SettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		D45FFC3B1E80A1D900372884 /* RadiusSettingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusSettingVC.swift; sourceTree = "<group>"; };
 		D45FFC3D1E80A22900372884 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		D4682F021E95D99A00A5586C /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		D48A88E31E8097DB004C8678 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		D48BF1511E64EB5C00F62098 /* dineTexas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dineTexas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48BF1541E64EB5C00F62098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				D4D8DEC51E8AD6C400B6DF08 /* dineTexas.entitlements */,
 				D48BF1541E64EB5C00F62098 /* AppDelegate.swift */,
 				1FD701941E7AA2E700EBCC07 /* LogonStatus.swift */,
+				D4682F021E95D99A00A5586C /* Location.swift */,
 				D48BF1581E64EB5C00F62098 /* Main.storyboard */,
 				D457292C1E809C8A00152687 /* Registration */,
 				D457292E1E809C9F00152687 /* MainApp */,
@@ -310,6 +313,7 @@
 				D45729371E80A0E300152687 /* DetailedVC.swift in Sources */,
 				D45FFC3A1E80A1CE00372884 /* SettingVC.swift in Sources */,
 				D45729331E809D9C00152687 /* LoginVC.swift in Sources */,
+				D4682F031E95D99A00A5586C /* Location.swift in Sources */,
 				D48BF1551E64EB5C00F62098 /* AppDelegate.swift in Sources */,
 				D457292B1E809C8200152687 /* WelcomeVC.swift in Sources */,
 				D45729351E809DB800152687 /* ForgotPasswordVC.swift in Sources */,

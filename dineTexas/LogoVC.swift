@@ -30,7 +30,7 @@ class LogoViewController: UIViewController {
                             print ("doing fadeOut")
                             self.fadeOut()
                         }
-        }
+            }
         )
     }
     
@@ -38,7 +38,7 @@ class LogoViewController: UIViewController {
         UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveLinear,
                        animations: {
                         self.logo.alpha = 0.0
-        }
+            }
         )
     }
     
@@ -46,7 +46,7 @@ class LogoViewController: UIViewController {
         print ("\(defaults.bool(forKey: "Login"))")
 //        let isLoggedIn = LogonStatusInstance.isAuthenticatedStatus()
 //        just to check constrainst:)
-        let isLoggedIn = false
+        let isLoggedIn = true
 //        Sleep for 2 sec to show logo
         sleep(5)
         if (isLoggedIn) {
