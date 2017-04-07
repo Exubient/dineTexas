@@ -22,15 +22,17 @@ class MapViewController: UIViewController {
     
     var ref: FIRDatabaseReference?
     var databaseHandle:FIRDatabaseHandle?
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //need to iterate over the number of locations
+        var index:Int?
+        index = 0
         //firebase reference
         ref = FIRDatabase.database().reference()
-        
         //retreive data and listen
-        ref?.child("location").child("location0").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref?.child("location").child("\(index!)").observeSingleEvent(of: .value, with: { (snapshot) in
             //code to execute when data is retrieved
             
             //convert data to NSDictionary
@@ -38,10 +40,25 @@ class MapViewController: UIViewController {
             //if there are no error in the database retrieving
             if let actualValue = value{
                 print("@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-                let address = actualValue["address"] as? String
-                print(address!)
+                
                 let name = actualValue["name"] as? String
-                print(name!)
+                print (name!)
+                let address = actualValue["address"] as? String
+                let hours = actualValue["hours"] as? String
+                let type = actualValue["type"] as? String
+                let lineCount = actualValue["lineCount"] as? Int
+                let outlets = actualValue["outlets"] as? Int
+                let food = actualValue["food"] as? Int
+                let coffee = actualValue["coffee"] as? Int
+                let alcohol = actualValue["alcohol"] as? Int
+                let averageRating = actualValue["averageRating"] as? Int
+                let website = actualValue["website"] as? String
+                print(website!)
+                
+                var instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!)
+                
+                print("@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+                
             }
         }) { (error) in
             print(error.localizedDescription)
@@ -56,7 +73,7 @@ class MapViewController: UIViewController {
     func func_tap(gesture: UITapGestureRecognizer) {
         searchBar.resignFirstResponder()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
