@@ -91,4 +91,29 @@ class MapViewController: UIViewController {
         self.alertController!.addAction(OKAction)
         self.present(alertController!, animated: true, completion: nil)
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard !(annotation is MKUserLocation) else {
+            return nil
+        }
+        
+        let annotationIdentifier = "Identifier"
+        var annotationView: MKAnnotationView?
+        if let dequeuedAnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifier) {
+            annotationView = dequeuedAnnotationView
+            annotationView?.annotation = annotation
+        }
+        else {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
+            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+        }
+        
+        if let annotationView = annotationView {
+            
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named: "cafe-green.png")
+        }
+        return annotationView
+    }
 }
+

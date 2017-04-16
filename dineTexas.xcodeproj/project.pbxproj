@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F46E3781EA3DC980010A58F /* cafe-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E3721EA3DC980010A58F /* cafe-green.png */; };
+		1F46E3791EA3DC980010A58F /* cafe-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E3731EA3DC980010A58F /* cafe-orange.png */; };
+		1F46E37A1EA3DC980010A58F /* cafe-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E3741EA3DC980010A58F /* cafe-red.png */; };
+		1F46E37B1EA3DC980010A58F /* restaurant-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E3751EA3DC980010A58F /* restaurant-green.png */; };
+		1F46E37C1EA3DC980010A58F /* restaurant-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E3761EA3DC980010A58F /* restaurant-orange.png */; };
+		1F46E37D1EA3DC980010A58F /* restaurant-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E3771EA3DC980010A58F /* restaurant-red.png */; };
 		1FD701951E7AA2E700EBCC07 /* LogonStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD701941E7AA2E700EBCC07 /* LogonStatus.swift */; };
-		59D081E8C8B2C947D03087F3 /* Pods_dineTexas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372CBC292706988B4CBC9500 /* Pods_dineTexas.framework */; };
 		D457292B1E809C8200152687 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457292A1E809C8200152687 /* WelcomeVC.swift */; };
 		D45729301E809CF400152687 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457292F1E809CF400152687 /* RegistrationVC.swift */; };
 		D45729331E809D9C00152687 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45729321E809D9C00152687 /* LoginVC.swift */; };
@@ -35,8 +40,13 @@
 
 /* Begin PBXFileReference section */
 		17151DAC14AEC0DFFE4EDC22 /* Pods-dineTexas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dineTexas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dineTexas/Pods-dineTexas.debug.xcconfig"; sourceTree = "<group>"; };
+		1F46E3721EA3DC980010A58F /* cafe-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafe-green.png"; sourceTree = "<group>"; };
+		1F46E3731EA3DC980010A58F /* cafe-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafe-orange.png"; sourceTree = "<group>"; };
+		1F46E3741EA3DC980010A58F /* cafe-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafe-red.png"; sourceTree = "<group>"; };
+		1F46E3751EA3DC980010A58F /* restaurant-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restaurant-green.png"; sourceTree = "<group>"; };
+		1F46E3761EA3DC980010A58F /* restaurant-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restaurant-orange.png"; sourceTree = "<group>"; };
+		1F46E3771EA3DC980010A58F /* restaurant-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "restaurant-red.png"; sourceTree = "<group>"; };
 		1FD701941E7AA2E700EBCC07 /* LogonStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogonStatus.swift; sourceTree = "<group>"; };
-		372CBC292706988B4CBC9500 /* Pods_dineTexas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dineTexas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9092C066E5D1A9B6D5A441 /* Pods-dineTexas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dineTexas.release.xcconfig"; path = "Pods/Target Support Files/Pods-dineTexas/Pods-dineTexas.release.xcconfig"; sourceTree = "<group>"; };
 		D457292A1E809C8200152687 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		D457292F1E809CF400152687 /* RegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
@@ -71,7 +81,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4D8DEC71E8ADEA500B6DF08 /* AdSupport.framework in Frameworks */,
-				59D081E8C8B2C947D03087F3 /* Pods_dineTexas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +138,12 @@
 		D48A88E01E8097B7004C8678 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1F46E3721EA3DC980010A58F /* cafe-green.png */,
+				1F46E3731EA3DC980010A58F /* cafe-orange.png */,
+				1F46E3741EA3DC980010A58F /* cafe-red.png */,
+				1F46E3751EA3DC980010A58F /* restaurant-green.png */,
+				1F46E3761EA3DC980010A58F /* restaurant-orange.png */,
+				1F46E3771EA3DC980010A58F /* restaurant-red.png */,
 				D48A88E31E8097DB004C8678 /* logo.png */,
 			);
 			name = Resources;
@@ -172,7 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				D4D8DEC61E8ADEA500B6DF08 /* AdSupport.framework */,
-				372CBC292706988B4CBC9500 /* Pods_dineTexas.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,11 +258,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F46E3781EA3DC980010A58F /* cafe-green.png in Resources */,
+				1F46E37B1EA3DC980010A58F /* restaurant-green.png in Resources */,
 				D48BF1621E64EB5C00F62098 /* LaunchScreen.storyboard in Resources */,
 				D48A88E41E8097DB004C8678 /* logo.png in Resources */,
 				D4E881181E70D914002E80C5 /* GoogleService-Info.plist in Resources */,
 				D48BF15F1E64EB5C00F62098 /* Assets.xcassets in Resources */,
+				1F46E37C1EA3DC980010A58F /* restaurant-orange.png in Resources */,
+				1F46E3791EA3DC980010A58F /* cafe-orange.png in Resources */,
+				1F46E37A1EA3DC980010A58F /* cafe-red.png in Resources */,
 				D48BF15A1E64EB5C00F62098 /* Main.storyboard in Resources */,
+				1F46E37D1EA3DC980010A58F /* restaurant-red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
