@@ -63,9 +63,6 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
                 displayAlert ("Password and confirmed Password do not match. Try again")
             }
             else {
-                defaults.set(email.text, forKey: "Email")
-                defaults.set(password.text, forKey: "Password")
-                defaults.set(true, forKey: "Login")
                 savePerson(firstName:firstName.text!, lastName:lastName.text!, email:email.text!, password: password.text!)
                 //Firebase Sign Up
                 FIRAuth.auth()?.createUser(withEmail: self.email.text!, password: self.password.text!) { (user, error) in

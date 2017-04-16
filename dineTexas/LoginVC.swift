@@ -49,26 +49,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             // if valid email and password, sequeue to map
             FIRAuth.auth()?.signIn(withEmail: self.email.text!, password: self.password.text!, completion: { (user, error) in
                 ///
-                })
-            }
-
+            })
+        }
+        let user = FIRAuth.auth()?.currentUser
+        if let user = user {
+            defaults.set(email.text, forKey: "Email")
+            defaults.set(password.text, forKey: "Password")
+            defaults.set(true, forKey: "Login")
             print ("performSegue to map")
-            checkInput()
-        }
-    
-    func checkInput(){
-        let emailDefault:String = defaults.string(forKey: "Email")!
-        let passwordDefault:String = defaults.string(forKey: "Password")!
-        if(emailDefault != email.text || passwordDefault != password.text){
-            displayAlert("Invalid email or password. Try again.")
-            //checkInput()
-        }
-        else {
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "loginToMap", sender: nil)
             }
         }
-    }
+        else {
+            displayAlert("Invalid email or password. Try again.")
+        }
+
+        }
     
     func displayAlert (_ message: String){
         self.alertController = UIAlertController(title: message, message: "", preferredStyle: UIAlertControllerStyle.alert)

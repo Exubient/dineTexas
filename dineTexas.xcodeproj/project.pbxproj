@@ -212,7 +212,6 @@
 				TargetAttributes = {
 					D48BF1501E64EB5C00F62098 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 5P6K8U5WT6;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -448,7 +447,7 @@
 			baseConfigurationReference = 17151DAC14AEC0DFFE4EDC22 /* Pods-dineTexas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5P6K8U5WT6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = dineTexas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = private.dineTexas;
@@ -462,7 +461,7 @@
 			baseConfigurationReference = BC9092C066E5D1A9B6D5A441 /* Pods-dineTexas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5P6K8U5WT6;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = dineTexas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = private.dineTexas;
