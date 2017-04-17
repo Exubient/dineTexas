@@ -15,7 +15,6 @@ class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         location_array = Locations.Constructs.Locations.location_array
-        print(Locations.Constructs.Locations.location_array.count)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

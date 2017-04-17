@@ -1070,7 +1070,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="T75-zA-5e2" style="IBUITableViewCellStyleDefault" id="wts-LT-9Id">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellid" textLabel="T75-zA-5e2" style="IBUITableViewCellStyleDefault" id="wts-LT-9Id">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wts-LT-9Id" id="jfb-VT-g9f">
@@ -1087,6 +1087,9 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="Lzg-2m-5gv" kind="show" id="lPo-kf-586"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1236,6 +1239,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Paz-ca-QFF"/>
         <segue reference="m6x-Yz-meH"/>
-        <segue reference="A21-bD-CKR"/>
+        <segue reference="lPo-kf-586"/>
     </inferredMetricsTieBreakers>
 </document>
