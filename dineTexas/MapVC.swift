@@ -67,7 +67,6 @@ class MapViewController: UIViewController {
                     
                     let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!)
                     Locations.Constructs.Locations.location_array.append(instance)
-//                    self.location_array.append(instance)
                     print(Locations.Constructs.Locations.location_array.count)
                 }
             }) { (error) in
@@ -92,7 +91,40 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func btn(_ sender: Any) {
-        displayAlert("This feature will be implemented in beta")
+        if self.searchBar.text == ""{
+            print("check")
+            for index in 0 ..< Locations.Constructs.Locations.location_array.count{
+                    // Drop pins
+                    let dropPin = MKPointAnnotation()
+                    let loc = CLLocationCoordinate2DMake(Locations.Constructs.Locations.location_array[index].lat, Locations.Constructs.Locations.location_array[index].lon)
+                    dropPin.coordinate = loc
+                    dropPin.title = Locations.Constructs.Locations.location_array[index].name
+                    self.mapView.addAnnotation(dropPin)
+            }
+            return
+        }
+        
+        for index in 0 ..< Locations.Constructs.Locations.location_array.count{
+            if self.searchBar.text == Locations.Constructs.Locations.location_array[index].name{
+                //remove all the Annotations
+                let allAnnotations = self.mapView.annotations
+                self.mapView.removeAnnotations(allAnnotations)
+                
+            }
+        }
+        
+        for index in 0 ..< Locations.Constructs.Locations.location_array.count{
+            if self.searchBar.text == Locations.Constructs.Locations.location_array[index].name{
+                // Drop pins
+                let dropPin = MKPointAnnotation()
+                let loc = CLLocationCoordinate2DMake(Locations.Constructs.Locations.location_array[index].lat, Locations.Constructs.Locations.location_array[index].lon)
+                dropPin.coordinate = loc
+                dropPin.title = Locations.Constructs.Locations.location_array[index].name
+                self.mapView.addAnnotation(dropPin)
+                
+                print("you have searched starbucks")
+            }
+        }
     }
     
     func displayAlert (_ message: String){
