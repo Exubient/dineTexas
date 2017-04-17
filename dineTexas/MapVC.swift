@@ -34,7 +34,7 @@ class MapViewController: UIViewController {
         ref = FIRDatabase.database().reference()
         //retreive data and listen
 
-        while (index! < 2){
+        while (index! < 10){
             ref?.child("location").child("\(index!)").observeSingleEvent(of: .value, with: { (snapshot) in
                 //code to execute when data is retrieved
                 
