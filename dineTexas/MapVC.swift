@@ -52,10 +52,12 @@ class MapViewController: UIViewController {
                 let coffee = actualValue["coffee"] as? Int
                 let alcohol = actualValue["alcohol"] as? Int
                 let averageRating = actualValue["averageRating"] as? Int
+                let longitude = actualValue["longitude"] as? Double
+                let latitude = actualValue["latitude"] as? Double
                 let website = actualValue["website"] as? String
-                print(website!)
+                print(longitude!)
                 
-                var instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!)
+                var instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, longitude: longitude!, latitude: latitude!)
                 
                 print("@@@@@@@@@@@@@@@@@@@@@@@@@@@")
                 
