@@ -954,7 +954,9 @@
                     <navigationItem key="navigationItem" title="Settings" id="jF3-DV-AXX"/>
                     <connections>
                         <outlet property="greenInput" destination="dH8-fv-tYp" id="fV5-4r-9HG"/>
+                        <outlet property="notifications" destination="rFP-Xo-jWh" id="TRu-tS-ycc"/>
                         <outlet property="orangeInput" destination="diK-Jl-q2h" id="Bqd-g9-Pjl"/>
+                        <outlet property="rememberLogin" destination="GdH-iK-mUy" id="cys-C3-HoH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNV-aV-CGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
