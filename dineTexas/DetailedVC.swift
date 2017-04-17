@@ -10,19 +10,15 @@ import UIKit
 
 class DetailedViewController: UIViewController {
     
-//    var locaton_array = [Location]()
+    var locaton_array: Location!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //need help on this part
-//        self.locaton_array = Locations.Constructs.Locations.location_array
-        print(Locations.Constructs.Locations.location_array.count)
-    
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
