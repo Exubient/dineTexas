@@ -43,8 +43,6 @@ class MapViewController: UIViewController {
                 let value = snapshot.value as? NSDictionary
                 //if there are no error in the database retrieving
                 if let actualValue = value{
-                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-                    
                     let name = actualValue["name"] as? String
                     print (name!)
                     let address = actualValue["address"] as? String
@@ -68,18 +66,13 @@ class MapViewController: UIViewController {
                     self.mapView.addAnnotation(dropPin)
                     
                     let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!)
-                    
                     self.location_array.append(instance)
-                    
-                    print("@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-                    
+                    print(self.location_array.count)
                 }
             }) { (error) in
                 print(error.localizedDescription)
             }
         index = index! + 1
-        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-        print(self.location_array.count)
         }
 
 

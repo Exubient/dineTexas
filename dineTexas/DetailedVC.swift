@@ -10,11 +10,14 @@ import UIKit
 
 class DetailedViewController: UIViewController {
     
-    let locaton_array = MapViewController().location_array
+    var locaton_array = [Location]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.locaton_array[0])
+        
+        //need help on this part
+        self.locaton_array = MapViewController().location_array
+        print(self.locaton_array.count)
     
 
         // Do any additional setup after loading the view.
