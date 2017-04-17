@@ -44,7 +44,7 @@ class MainTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellid", for: indexPath)
-        cell.textLabel?.text = "\(location_array[indexPath.row].getName())"
+        cell.textLabel?.text = "\(location_array[indexPath.row].name)"
         return cell
     }
     
