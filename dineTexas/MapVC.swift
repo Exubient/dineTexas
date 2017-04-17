@@ -27,6 +27,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         centerMapOnLocation()
+        self.mapView.delegate = self
         //need to iterate over the number of locations
         var index:Int?
         index = 0
@@ -76,8 +77,6 @@ class MapViewController: UIViewController {
             }
         index = index! + 1
         }
-        
-        
         searchBar.autocorrectionType = UITextAutocorrectionType.no
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
         self.view.addGestureRecognizer(tap)
@@ -145,3 +144,12 @@ class MapViewController: UIViewController {
     }
 }
 
+extension MapViewController: MKMapViewDelegate {
+    // This method returns a view for the drawing of the travel path.
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let lineView = MKPolylineRenderer(overlay: overlay)
+        lineView.strokeColor = UIColor.green
+        
+        return lineView
+    }
+}
