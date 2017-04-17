@@ -9,9 +9,13 @@
 import UIKit
 
 class DetailedViewController: UIViewController {
-
+    
+    let locaton_array = MapViewController().location_array
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(self.locaton_array[0])
+    
 
         // Do any additional setup after loading the view.
     }

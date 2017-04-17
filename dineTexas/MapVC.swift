@@ -20,7 +20,7 @@ class MapViewController: UIViewController {
     var alertController:UIAlertController? = nil
     let locManager = CLLocationManager()
     let annotation = MKPointAnnotation()
-    
+    var location_array = [Location]()
     var ref: FIRDatabaseReference?
     var databaseHandle:FIRDatabaseHandle?
     
@@ -59,15 +59,17 @@ class MapViewController: UIViewController {
                     let website = actualValue["website"] as? String
                     let lat = actualValue["latitude"] as? Double
                     let lon = actualValue["longitude"] as? Double
-                    
                     let loc = CLLocationCoordinate2DMake(lat!, lon!)
+                    
                     // Drop a pin
                     let dropPin = MKPointAnnotation()
                     dropPin.coordinate = loc
                     dropPin.title = name
                     self.mapView.addAnnotation(dropPin)
                     
-                    var instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!)
+                    let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!)
+                    
+                    self.location_array.append(instance)
                     
                     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@")
                     
@@ -76,7 +78,11 @@ class MapViewController: UIViewController {
                 print(error.localizedDescription)
             }
         index = index! + 1
+        print("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+        print(self.location_array.count)
         }
+
+
         searchBar.autocorrectionType = UITextAutocorrectionType.no
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
         self.view.addGestureRecognizer(tap)
