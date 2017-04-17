@@ -22,10 +22,10 @@ class Location {
     private var alcohol:Int
     private var averageRating:Int
     private var webSite:String
-    private var longitude:Double
-    private var latitude:Double
+    private var lon:Double
+    private var lat:Double
     
-    init (key:Int, name:String, address:String, hours:String, type:String, lineCount:Int, outlets:Int, food:Int, coffee:Int, alcohol:Int, averageRating:Int, webSite:String, longitude:Double, latitude:Double
+    init (key:Int, name:String, address:String, hours:String, type:String, lineCount:Int, outlets:Int, food:Int, coffee:Int, alcohol:Int, averageRating:Int, webSite:String, lon:Double, lat:Double
     ){
         self.key = key
         self.name = name
@@ -39,8 +39,8 @@ class Location {
         self.alcohol = alcohol
         self.averageRating = averageRating
         self.webSite = webSite
-        self.longitude = longitude
-        self.latitude = latitude
+        self.lon = lon
+        self.lat = lat
 
     }
 

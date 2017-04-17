@@ -33,40 +33,10 @@ class MapViewController: UIViewController {
         //firebase reference
         ref = FIRDatabase.database().reference()
         //retreive data and listen
-<<<<<<< HEAD
-        ref?.child("location").child("\(index!)").observeSingleEvent(of: .value, with: { (snapshot) in
-            //code to execute when data is retrieved
-            
-            //convert data to NSDictionary
-            let value = snapshot.value as? NSDictionary
-            //if there are no error in the database retrieving
-            if let actualValue = value{
-                print("@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-                
-                let name = actualValue["name"] as? String
-                print (name!)
-                let address = actualValue["address"] as? String
-                let hours = actualValue["hours"] as? String
-                let type = actualValue["type"] as? String
-                let lineCount = actualValue["lineCount"] as? Int
-                let outlets = actualValue["outlets"] as? Int
-                let food = actualValue["food"] as? Int
-                let coffee = actualValue["coffee"] as? Int
-                let alcohol = actualValue["alcohol"] as? Int
-                let averageRating = actualValue["averageRating"] as? Int
-                let longitude = actualValue["longitude"] as? Double
-                let latitude = actualValue["latitude"] as? Double
-                let website = actualValue["website"] as? String
-                print(longitude!)
-                
-                var instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, longitude: longitude!, latitude: latitude!)
-                
-                print("@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-=======
+
         while (index! < 2){
             ref?.child("location").child("\(index!)").observeSingleEvent(of: .value, with: { (snapshot) in
                 //code to execute when data is retrieved
->>>>>>> bf64a03eea14a62ac3539a192fa7e75dfe835c07
                 
                 //convert data to NSDictionary
                 let value = snapshot.value as? NSDictionary
@@ -96,7 +66,7 @@ class MapViewController: UIViewController {
                     dropPin.title = name
                     self.mapView.addAnnotation(dropPin)
                     
-                    var instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!)
+                    var instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!)
                     
                     print("@@@@@@@@@@@@@@@@@@@@@@@@@@@")
                     
