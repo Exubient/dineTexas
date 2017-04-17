@@ -25,7 +25,7 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        centerMapOnLocation()
         //need to iterate over the number of locations
         var index:Int?
         index = 0
@@ -90,6 +90,21 @@ class MapViewController: UIViewController {
         }
         self.alertController!.addAction(OKAction)
         self.present(alertController!, animated: true, completion: nil)
+    }
+    
+    func centerMapOnLocation() {
+//        TODO: Need to remove hard code, update with radius seting... 1609m in a mile
+        let latitudeMeters = 1.0*1609.34
+        let longitudeMeters = 1.0*1609.34
+        
+        // The first argument - location - is the centerpoint.
+        // The second and third arguments indicate the distance in meters from that centerpoint to show.
+        let centerLocation = CLLocation(latitude: 30.286218, longitude: -97.739388)
+        
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(centerLocation.coordinate, latitudeMeters, longitudeMeters)
+        
+        // setRegion tells mapView to display the defined region
+        mapView.setRegion(coordinateRegion, animated: true)
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

@@ -34,17 +34,16 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
                 greenInput.text = String(gSetting!)
                 orangeInput.text = String(oSetting!)
             }
-            
-//            
-//            greenInput.text = setting.value(forKey: "greenSetting") as? String
-//            orangeInput.text = setting.value(forKey: "orangeSetting") as? String
+            else {
+                greenInput.text = "10"
+                orangeInput.text = "20"
+            }
             notifications.setOn((setting.value(forKey: "notifications") as? Bool)!, animated: false)
             rememberLogin.setOn((setting.value(forKey: "rememberLogin") as? Bool)!, animated: false)
         } else {
             greenInput.text = "10"
             orangeInput.text = "20"
         }
-
     }
 
     override func didReceiveMemoryWarning() {
