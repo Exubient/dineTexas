@@ -93,7 +93,7 @@ class MainTableViewController: UITableViewController {
         let indexPath: Int = (self.tableView.indexPathForSelectedRow?.row)!
         let data = location_array[indexPath]
         if let destinationViewController = segue.destination as? DetailedViewController {
-            destinationViewController.locaton_array = data
+            destinationViewController.location_array = data
         }
     }
     

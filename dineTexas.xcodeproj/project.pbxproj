@@ -35,6 +35,14 @@
 		D48BF1621E64EB5C00F62098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48BF1601E64EB5C00F62098 /* LaunchScreen.storyboard */; };
 		D4D8DEC71E8ADEA500B6DF08 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8DEC61E8ADEA500B6DF08 /* AdSupport.framework */; };
 		D4E881181E70D914002E80C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4E881171E70D914002E80C5 /* GoogleService-Info.plist */; };
+		EF4DC8D01EA58D3F00E806CB /* Caffé Medici.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8C81EA58D3F00E806CB /* Caffé Medici.jpg */; };
+		EF4DC8D11EA58D3F00E806CB /* Chick-fil-A.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8C91EA58D3F00E806CB /* Chick-fil-A.jpg */; };
+		EF4DC8D21EA58D3F00E806CB /* Don Japanese Food Truck.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8CA1EA58D3F00E806CB /* Don Japanese Food Truck.jpg */; };
+		EF4DC8D31EA58D3F00E806CB /* Kerbey Lane Cafe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8CB1EA58D3F00E806CB /* Kerbey Lane Cafe.jpg */; };
+		EF4DC8D41EA58D3F00E806CB /* Starbucks Coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8CC1EA58D3F00E806CB /* Starbucks Coffee.jpg */; };
+		EF4DC8D51EA58D3F00E806CB /* Taco Cabana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8CD1EA58D3F00E806CB /* Taco Cabana.jpg */; };
+		EF4DC8D61EA58D3F00E806CB /* Texas Expresso.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8CE1EA58D3F00E806CB /* Texas Expresso.jpg */; };
+		EF4DC8D71EA58D3F00E806CB /* Torchy's Tacos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8CF1EA58D3F00E806CB /* Torchy's Tacos.jpg */; };
 		EF6AA5BE1E85DD59006334F2 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */; };
 		EFCDBB9C1E65F88E0053EFA2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDBB9B1E65F88D0053EFA2 /* MapVC.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +81,14 @@
 		D4D8DEC51E8AD6C400B6DF08 /* dineTexas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = dineTexas.entitlements; sourceTree = "<group>"; };
 		D4D8DEC61E8ADEA500B6DF08 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		D4E881171E70D914002E80C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EF4DC8C81EA58D3F00E806CB /* Caffé Medici.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Caffé Medici.jpg"; sourceTree = "<group>"; };
+		EF4DC8C91EA58D3F00E806CB /* Chick-fil-A.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chick-fil-A.jpg"; sourceTree = "<group>"; };
+		EF4DC8CA1EA58D3F00E806CB /* Don Japanese Food Truck.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Don Japanese Food Truck.jpg"; sourceTree = "<group>"; };
+		EF4DC8CB1EA58D3F00E806CB /* Kerbey Lane Cafe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Kerbey Lane Cafe.jpg"; sourceTree = "<group>"; };
+		EF4DC8CC1EA58D3F00E806CB /* Starbucks Coffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Starbucks Coffee.jpg"; sourceTree = "<group>"; };
+		EF4DC8CD1EA58D3F00E806CB /* Taco Cabana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Taco Cabana.jpg"; sourceTree = "<group>"; };
+		EF4DC8CE1EA58D3F00E806CB /* Texas Expresso.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Texas Expresso.jpg"; sourceTree = "<group>"; };
+		EF4DC8CF1EA58D3F00E806CB /* Torchy's Tacos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Torchy's Tacos.jpg"; sourceTree = "<group>"; };
 		EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		EFCDBB9B1E65F88D0053EFA2 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +157,14 @@
 		D48A88E01E8097B7004C8678 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EF4DC8C81EA58D3F00E806CB /* Caffé Medici.jpg */,
+				EF4DC8C91EA58D3F00E806CB /* Chick-fil-A.jpg */,
+				EF4DC8CA1EA58D3F00E806CB /* Don Japanese Food Truck.jpg */,
+				EF4DC8CB1EA58D3F00E806CB /* Kerbey Lane Cafe.jpg */,
+				EF4DC8CC1EA58D3F00E806CB /* Starbucks Coffee.jpg */,
+				EF4DC8CD1EA58D3F00E806CB /* Taco Cabana.jpg */,
+				EF4DC8CE1EA58D3F00E806CB /* Texas Expresso.jpg */,
+				EF4DC8CF1EA58D3F00E806CB /* Torchy's Tacos.jpg */,
 				1F46E3721EA3DC980010A58F /* cafe-green.png */,
 				1F46E3731EA3DC980010A58F /* cafe-orange.png */,
 				1F46E3741EA3DC980010A58F /* cafe-red.png */,
@@ -264,14 +288,22 @@
 				1F46E3781EA3DC980010A58F /* cafe-green.png in Resources */,
 				1F46E37B1EA3DC980010A58F /* restaurant-green.png in Resources */,
 				D48BF1621E64EB5C00F62098 /* LaunchScreen.storyboard in Resources */,
+				EF4DC8D51EA58D3F00E806CB /* Taco Cabana.jpg in Resources */,
 				D48A88E41E8097DB004C8678 /* logo.png in Resources */,
 				D4E881181E70D914002E80C5 /* GoogleService-Info.plist in Resources */,
+				EF4DC8D31EA58D3F00E806CB /* Kerbey Lane Cafe.jpg in Resources */,
 				D48BF15F1E64EB5C00F62098 /* Assets.xcassets in Resources */,
 				1F46E37C1EA3DC980010A58F /* restaurant-orange.png in Resources */,
+				EF4DC8D61EA58D3F00E806CB /* Texas Expresso.jpg in Resources */,
 				1F46E3791EA3DC980010A58F /* cafe-orange.png in Resources */,
 				1F46E37A1EA3DC980010A58F /* cafe-red.png in Resources */,
+				EF4DC8D01EA58D3F00E806CB /* Caffé Medici.jpg in Resources */,
 				D48BF15A1E64EB5C00F62098 /* Main.storyboard in Resources */,
+				EF4DC8D11EA58D3F00E806CB /* Chick-fil-A.jpg in Resources */,
+				EF4DC8D41EA58D3F00E806CB /* Starbucks Coffee.jpg in Resources */,
+				EF4DC8D71EA58D3F00E806CB /* Torchy's Tacos.jpg in Resources */,
 				1F46E37D1EA3DC980010A58F /* restaurant-red.png in Resources */,
+				EF4DC8D21EA58D3F00E806CB /* Don Japanese Food Truck.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
