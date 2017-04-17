@@ -20,7 +20,7 @@ class MapViewController: UIViewController {
     var alertController:UIAlertController? = nil
     let locManager = CLLocationManager()
     let annotation = MKPointAnnotation()
-    var location_array = [Location]()
+//    var location_array = [Location]()
     var ref: FIRDatabaseReference?
     var databaseHandle:FIRDatabaseHandle?
     
@@ -66,8 +66,9 @@ class MapViewController: UIViewController {
                     self.mapView.addAnnotation(dropPin)
                     
                     let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!)
-                    self.location_array.append(instance)
-                    print(self.location_array.count)
+                    Locations.Constructs.Locations.location_array.append(instance)
+//                    self.location_array.append(instance)
+                    print(Locations.Constructs.Locations.location_array.count)
                 }
             }) { (error) in
                 print(error.localizedDescription)

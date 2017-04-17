@@ -10,13 +10,13 @@ import UIKit
 
 class MainTableViewController: UITableViewController {
 
-    let location_array = MapViewController().location_array
+//    let location_array = MapViewController().location_array
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(self.location_array.count)
+        print(Locations.Constructs.Locations.location_array.count)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
