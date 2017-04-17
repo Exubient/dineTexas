@@ -61,6 +61,8 @@ class RegistrationVC: UIViewController, UITextFieldDelegate {
         else {
             if (password.text != confPassword.text){
                 displayAlert ("Password and confirmed Password do not match. Try again")
+            } else if ((password.text?.characters.count)! < 6){
+                 displayAlert ("Password must be at least 6 characters")
             }
             else {
                 savePerson(firstName:firstName.text!, lastName:lastName.text!, email:email.text!, password: password.text!)
