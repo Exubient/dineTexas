@@ -12,7 +12,7 @@ import CoreLocation
 import FirebaseDatabase
 import FirebaseAuth
 import Firebase
-
+import CoreData
 
 class MapViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -20,12 +20,16 @@ class MapViewController: UIViewController {
     var alertController:UIAlertController? = nil
     let locManager = CLLocationManager()
     let annotation = MKPointAnnotation()
+    var pointAnnotation:CustomPointAnnotation!
+    var pinAnnotationView:MKPinAnnotationView!
+    var settings = [NSManagedObject]()
 //    var location_array = [Location]()
     var ref: FIRDatabaseReference?
     var databaseHandle:FIRDatabaseHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
         centerMapOnLocation()
         self.mapView.delegate = self
         //need to iterate over the number of locations
@@ -58,13 +62,15 @@ class MapViewController: UIViewController {
                     let lat = actualValue["latitude"] as? Double
                     let lon = actualValue["longitude"] as? Double
                     let loc = CLLocationCoordinate2DMake(lat!, lon!)
-                    
-                    // Drop a pin
-                    let dropPin = MKPointAnnotation()
+                    let dropPin = CustomPointAnnotation()
                     dropPin.coordinate = loc
                     dropPin.title = name
-                    self.mapView.addAnnotation(dropPin)
                     
+                    dropPin.pinCustomImageName = self.customPinImage(type: type!, lineCount: lineCount!)
+                    
+                    self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
+                    self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
+//                    self.mapView.addAnnotation(dropPin)
                     let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!)
                     Locations.Constructs.Locations.location_array.append(instance)
 //                    self.location_array.append(instance)
@@ -84,6 +90,41 @@ class MapViewController: UIViewController {
     
     func func_tap(gesture: UITapGestureRecognizer) {
         searchBar.resignFirstResponder()
+    }
+    
+    func customPinImage(type: String, lineCount:Int) -> String {
+        var gSetting:Int?
+        var oSetting:Int?
+        if ( settings.count >= 1 ){
+        let setting = settings[ settings.count - 1 ]
+        gSetting = setting.value(forKey: "greenSetting") as? Int
+        oSetting = setting.value(forKey: "orangeSetting") as? Int
+        }
+        if(gSetting == nil){
+            gSetting = 10
+            print("g Setting not initialized yet")
+        }
+        if(oSetting == nil){
+            oSetting = 20
+            print("o Setting not initialized yet")
+        }
+        var constructColor = "green"
+        var constructType = "restaurant"
+        if ( type == "cafe" ) {
+            constructType = "cafe"
+        } else if ( type == "restaurant" ) {
+            constructType = "restaurant"
+        }
+        
+        
+        if (lineCount < gSetting!){
+            constructColor = "green"
+        } else if (lineCount < oSetting!) {
+            constructColor = "orange"
+        } else {
+            constructColor = "red"
+        }
+        return "\(constructType)-\(constructColor).png"
     }
     
     override func didReceiveMemoryWarning() {
@@ -138,9 +179,35 @@ class MapViewController: UIViewController {
         if let annotationView = annotationView {
             
             annotationView.canShowCallout = true
-            annotationView.image = UIImage(named: "cafe-green.png")
+            let customPointAnnotation = annotation as! CustomPointAnnotation
+            annotationView.image = UIImage(named: customPointAnnotation.pinCustomImageName)//"cafe-green.png")
         }
         return annotationView
+    }
+    
+    fileprivate func loadData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName:"Settings")
+        
+        var fetchedResults:[NSManagedObject]? = nil
+        
+        do {
+            try fetchedResults = managedContext.fetch(fetchRequest) as? [NSManagedObject]
+        } catch {
+            // what to do if an error occurs?
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+        
+        if let results = fetchedResults {
+            settings = results
+        } else {
+            print("Could not fetch")
+        }
     }
 }
 
