@@ -1,8 +1,7 @@
 Implementation Contributions:
-Matt Davidson - 
 Henry Kim - Implemented firebase and added registration features to the app. Set up the password reset button. Added pods that are used for firebase. Changed the background color  to match the logo. Created database that is used for storing locations on the map on firebase. Implemented the search box, on the mapVC to find a location. 
 John Madden - Finished the login features, which uses the firebase server to check for a valid username and password to login. Set this to default login, so the user will only login once. Added pins for the locations on the server, and added to the default list of coffee shops and restaurants. Implemented table view to show this list of locations and added ability to favorite a location. Also did README. 
-Matt Davidson - Created the custom pins to be used on the map and modified the basic pin tool to use these new pins. These are color coded based on the number of people in the lines. Also created pins for separate categories, such as a restaurant or a cafe. Added settings to core data, so they will keep it’s state after closing the app. Also modified the radius of search so that it can be changed through the settings. 
+Matt Davidson - Created the custom pins to be used on the map and modified the basic pin tool to use these new pins. These are color coded based on the number of people in the lines. Also created pins for separate categories, such as a restaurant or a cafe. Added settings to core data, so they will keep it’s state after closing the app. 
 
 Grading Level: Same grade for all members.
 
