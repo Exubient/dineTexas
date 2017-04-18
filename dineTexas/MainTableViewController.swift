@@ -90,9 +90,9 @@ class MainTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let indexPath: Int = (self.tableView.indexPathForSelectedRow?.row)!
-        let data = location_array[indexPath]
         if let destinationViewController = segue.destination as? DetailedViewController {
+            let indexPath: Int = (self.tableView.indexPathForSelectedRow?.row)!
+            let data = location_array[indexPath]
             destinationViewController.location_array = data
             destinationViewController.index = indexPath
         }

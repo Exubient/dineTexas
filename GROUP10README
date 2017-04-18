@@ -1,14 +1,14 @@
 Implementation Contributions:
-Matt Davidson - Worked on the segues from each story board as well as defined the general color base. He also created this README.
-Henry Kim - Worked on Visual constraints for the whole project and began working on the firebase implementation
-John Madden - Logo animation and picture. Implemented Registration Feature as well as hooked it up to Core Data
+Matt Davidson - 
+Henry Kim - Implemented firebase and added registration features to the app. Set up the password reset button. Added pods that are used for firebase. Changed the background color  to match the logo. Created database that is used for storing locations on the map on firebase. Implemented the search box, on the mapVC to find a location. 
+John Madden - Finished the login features, which uses the firebase server to check for a valid username and password to login. Set this to default login, so the user will only login once. Added pins for the locations on the server, and added to the default list of coffee shops and restaurants. Implemented table view to show this list of locations and added ability to favorite a location. Also did README. 
+Matt Davidson - Created the custom pins to be used on the map and modified the basic pin tool to use these new pins. These are color coded based on the number of people in the lines. Also created pins for separate categories, such as a restaurant or a cafe. Added settings to core data, so they will keep it’s state after closing the app. Also modified the radius of search so that it can be changed through the settings. 
 
 Grading Level: Same grade for all members.
 
 Differences:
-In the App Idea Paper we noted that the user will need to "Press a button to segue to main view" while they are viewing the logo. It is more visually appealing and less user interaction for it to auto segue to either the login screen if they aren't logged in, or to the main app if they are authenticated.
+In the App Idea Paper, we said that we would use Google Maps API for the map system. Instead, we used Apple Maps API. This is because the Apple Maps API was much easier to use and design for in the Beta. We also said that Users will be able to add locations to the list, which we still plan to do, but will be added to the final. This function right now is only implemented through direct contact with admins, who can then modify the firebase database directly. We also have the visual representation of the rating/favorite system on the detailed view controller of a location, which is accessible through the list of locations, from the tab bar. Many of the final features have also been implemented with this version too, such as part of the favorite system, labels for representation in the detailed view and a picture of the location in the detailed view. 
 
 Special Instructions:
-1. If you create an account and log into the app, then close and re-open the app, it will remember your authentication state and instead of going back to the login/registration screen it will connect you to the app. While there is a setting to disable this feature, it has not been implemented yet.
+If you create an account and log into the app, then close and re-open the app, it will remember your authentication state and instead of going back to the login/registration screen it will connect you to the app. To create an account, make sure to use a password of at least 6 characters so that you will be able to login to the app. For easier access, you can simply use one of our test accounts: test@test.com, password: password, to login to the application if you are having problems. 
 
-2. We started a little early on some beta implementations. While some of these view controllers are on the storyboard they are not accessible to the user yet.

@@ -50,10 +50,10 @@ class AddLocationViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func uploadMenu(_ sender: Any) {
-        displayAlert("This function will be implemented in the Beta release")
+        displayAlert("This function will be implemented in the Final release")
     }
     @IBAction func Submit(_ sender: Any) {
-        displayAlert("This function will be implemented in the Beta release")
+        displayAlert("This function will be implemented in the Final release")
     }
     
     
