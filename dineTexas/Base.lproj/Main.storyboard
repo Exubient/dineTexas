@@ -246,6 +246,10 @@
                                     <color key="titleColor" red="0.45708915589999999" green="0.98418223859999998" blue="0.99218356610000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xiy-P6-0DW">
+                                <rect key="frame" x="16" y="489" width="59" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.113708131" green="0.1137354299" blue="0.11370643229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -288,6 +292,7 @@
                     <connections>
                         <outlet property="alcohol" destination="DOv-Ld-FT9" id="so6-lZ-DWr"/>
                         <outlet property="coffee" destination="aX1-8Q-IBe" id="WkR-JC-zKb"/>
+                        <outlet property="favoriteStar" destination="xiy-P6-0DW" id="eVc-HU-Lz5"/>
                         <outlet property="food" destination="L4i-S9-d6S" id="cKk-Fr-aFr"/>
                         <outlet property="image" destination="6yp-g6-Gs0" id="C45-r4-Sc1"/>
                         <outlet property="outlets" destination="XMm-80-S2a" id="uwr-wC-97q"/>
@@ -298,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziO-k1-gvD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3607" y="1389"/>
+            <point key="canvasLocation" x="3605.5999999999999" y="1388.4557721139431"/>
         </scene>
         <!--Add Location-->
         <scene sceneID="aQF-bS-Cav">

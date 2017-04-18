@@ -43,6 +43,7 @@
 		EF4DC8D51EA58D3F00E806CB /* Taco Cabana.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8CD1EA58D3F00E806CB /* Taco Cabana.jpg */; };
 		EF4DC8D61EA58D3F00E806CB /* Texas Expresso.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8CE1EA58D3F00E806CB /* Texas Expresso.jpg */; };
 		EF4DC8D71EA58D3F00E806CB /* Torchy's Tacos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8CF1EA58D3F00E806CB /* Torchy's Tacos.jpg */; };
+		EF4DC8DB1EA58F4900E806CB /* Star.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8DA1EA58F4900E806CB /* Star.jpeg */; };
 		EF6AA5BE1E85DD59006334F2 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */; };
 		EFCDBB9C1E65F88E0053EFA2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDBB9B1E65F88D0053EFA2 /* MapVC.swift */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		EF4DC8CD1EA58D3F00E806CB /* Taco Cabana.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Taco Cabana.jpg"; sourceTree = "<group>"; };
 		EF4DC8CE1EA58D3F00E806CB /* Texas Expresso.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Texas Expresso.jpg"; sourceTree = "<group>"; };
 		EF4DC8CF1EA58D3F00E806CB /* Torchy's Tacos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Torchy's Tacos.jpg"; sourceTree = "<group>"; };
+		EF4DC8DA1EA58F4900E806CB /* Star.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Star.jpeg; sourceTree = "<group>"; };
 		EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		EFCDBB9B1E65F88D0053EFA2 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 		D48A88E01E8097B7004C8678 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EF4DC8DA1EA58F4900E806CB /* Star.jpeg */,
 				EF4DC8C81EA58D3F00E806CB /* Caffé Medici.jpg */,
 				EF4DC8C91EA58D3F00E806CB /* Chick-fil-A.jpg */,
 				EF4DC8CA1EA58D3F00E806CB /* Don Japanese Food Truck.jpg */,
@@ -300,6 +303,7 @@
 				EF4DC8D01EA58D3F00E806CB /* Caffé Medici.jpg in Resources */,
 				D48BF15A1E64EB5C00F62098 /* Main.storyboard in Resources */,
 				EF4DC8D11EA58D3F00E806CB /* Chick-fil-A.jpg in Resources */,
+				EF4DC8DB1EA58F4900E806CB /* Star.jpeg in Resources */,
 				EF4DC8D41EA58D3F00E806CB /* Starbucks Coffee.jpg in Resources */,
 				EF4DC8D71EA58D3F00E806CB /* Torchy's Tacos.jpg in Resources */,
 				1F46E37D1EA3DC980010A58F /* restaurant-red.png in Resources */,

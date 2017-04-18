@@ -56,6 +56,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             defaults.set(email.text, forKey: "Email")
             defaults.set(password.text, forKey: "Password")
             defaults.set(true, forKey: "Login")
+            defaults.set([], forKey: "Favorites")
             print ("performSegue to map")
             DispatchQueue.main.async {
                 self.performSegue(withIdentifier: "loginToMap", sender: nil)

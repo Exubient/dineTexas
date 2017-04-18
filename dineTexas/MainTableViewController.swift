@@ -94,6 +94,7 @@ class MainTableViewController: UITableViewController {
         let data = location_array[indexPath]
         if let destinationViewController = segue.destination as? DetailedViewController {
             destinationViewController.location_array = data
+            destinationViewController.index = indexPath
         }
     }
     
