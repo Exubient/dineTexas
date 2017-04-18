@@ -71,8 +71,7 @@ class DetailedViewController: UIViewController {
         else {
             alcohol.setOn(false, animated: false)
         }
-        
-        ratings.selectedSegmentIndex = location_array.averageRating
+        self.ratings.selectedSegmentIndex = location_array.averageRating - 1
         
         
         // Do any additional setup after loading the view.
