@@ -37,16 +37,13 @@ class AddLocationViewController: UIViewController, UITextFieldDelegate {
 }
 
 //tap outside to remove keyboard
-func func_tap(gesture: UITapGestureRecognizer) {
-    name.resignFirstResponder()
-    address.resignFirstResponder()
-    hours.resignFirstResponder()
-    website.resignFirstResponder()
-}
-
-
-
-
+    func func_tap(gesture: UITapGestureRecognizer) {
+        name.resignFirstResponder()
+        address.resignFirstResponder()
+        hours.resignFirstResponder()
+        website.resignFirstResponder()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

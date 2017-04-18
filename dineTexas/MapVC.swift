@@ -23,7 +23,6 @@ class MapViewController: UIViewController {
     var pointAnnotation:CustomPointAnnotation!
     var pinAnnotationView:MKPinAnnotationView!
     var settings = [NSManagedObject]()
-//    var location_array = [Location]()
     var ref: FIRDatabaseReference?
     var databaseHandle:FIRDatabaseHandle?
     
@@ -70,7 +69,6 @@ class MapViewController: UIViewController {
                     
                     self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
                     self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
-//                    self.mapView.addAnnotation(dropPin)
                     let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!)
                     Locations.Constructs.Locations.location_array.append(instance)
                     print(Locations.Constructs.Locations.location_array.count)
@@ -80,8 +78,6 @@ class MapViewController: UIViewController {
             }
         index = index! + 1
         }
-
-
         searchBar.autocorrectionType = UITextAutocorrectionType.no
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
         self.view.addGestureRecognizer(tap)
@@ -89,6 +85,27 @@ class MapViewController: UIViewController {
     
     func func_tap(gesture: UITapGestureRecognizer) {
         searchBar.resignFirstResponder()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //remove all the Annotations
+        let allAnnotations = self.mapView.annotations
+        self.mapView.removeAnnotations(allAnnotations)
+        loadData()
+        
+        for index in 0 ..< Locations.Constructs.Locations.location_array.count{
+            // Drop pins
+            let dropPin = CustomPointAnnotation()
+            let loc = CLLocationCoordinate2DMake(Locations.Constructs.Locations.location_array[index].lat, Locations.Constructs.Locations.location_array[index].lon)
+            dropPin.coordinate = loc
+            dropPin.title = Locations.Constructs.Locations.location_array[index].name
+            let type = Locations.Constructs.Locations.location_array[index].type
+            let lineCount = Locations.Constructs.Locations.location_array[index].lineCount
+            dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount)
+            
+            self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
+            self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
+        }
     }
     
     func customPinImage(type: String, lineCount:Int) -> String {
@@ -115,7 +132,6 @@ class MapViewController: UIViewController {
             constructType = "restaurant"
         }
         
-        
         if (lineCount < gSetting!){
             constructColor = "green"
         } else if (lineCount < oSetting!) {
@@ -135,12 +151,16 @@ class MapViewController: UIViewController {
         if self.searchBar.text == ""{
             print("check")
             for index in 0 ..< Locations.Constructs.Locations.location_array.count{
-                    // Drop pins
-                    let dropPin = MKPointAnnotation()
+                let dropPin = CustomPointAnnotation()
                     let loc = CLLocationCoordinate2DMake(Locations.Constructs.Locations.location_array[index].lat, Locations.Constructs.Locations.location_array[index].lon)
                     dropPin.coordinate = loc
                     dropPin.title = Locations.Constructs.Locations.location_array[index].name
-                    self.mapView.addAnnotation(dropPin)
+                let type = Locations.Constructs.Locations.location_array[index].type
+                let lineCount = Locations.Constructs.Locations.location_array[index].lineCount
+                dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount)
+                
+                self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
+                self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
             }
             return
         }
@@ -156,14 +176,16 @@ class MapViewController: UIViewController {
         
         for index in 0 ..< Locations.Constructs.Locations.location_array.count{
             if self.searchBar.text == Locations.Constructs.Locations.location_array[index].name{
-                // Drop pins
-                let dropPin = MKPointAnnotation()
+                let dropPin = CustomPointAnnotation()
                 let loc = CLLocationCoordinate2DMake(Locations.Constructs.Locations.location_array[index].lat, Locations.Constructs.Locations.location_array[index].lon)
                 dropPin.coordinate = loc
                 dropPin.title = Locations.Constructs.Locations.location_array[index].name
-                self.mapView.addAnnotation(dropPin)
+                let type = Locations.Constructs.Locations.location_array[index].type
+                let lineCount = Locations.Constructs.Locations.location_array[index].lineCount
+                dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount)
                 
-                print("you have searched starbucks")
+                self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
+                self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
             }
         }
     }
