@@ -95,6 +95,7 @@ class MainTableViewController: UITableViewController {
             let data = location_array[indexPath]
             destinationViewController.location_array = data
             destinationViewController.index = indexPath
+            destinationViewController.locationArrayLength = location_array.count
         }
     }
     

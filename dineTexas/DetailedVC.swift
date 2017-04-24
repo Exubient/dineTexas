@@ -12,6 +12,7 @@ class DetailedViewController: UIViewController {
     
     var location_array: Location!
     var index: Int!
+    var locationArrayLength: Int!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var outlets: UISwitch!
@@ -21,27 +22,46 @@ class DetailedViewController: UIViewController {
     @IBOutlet weak var wifi: UISwitch!
     @IBOutlet weak var favoriteStar: UIImageView!
     @IBOutlet weak var ratings: UISegmentedControl!
+    @IBOutlet weak var favoriteButton: UIButton!
+    var isFavorite = false
     let defaults = UserDefaults.standard
-    
+    var favorites:[Bool]!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var favorites = (defaults.array(forKey: "Favorites")) as? [Int]
-        if (favorites == nil){
-            defaults.set([], forKey: "Favorites")
-            favorites = []
+        favorites = defaults.array(forKey: "Favorites")  as? [Bool] ?? [Bool]()
+        print(favorites)
+        if (favorites.count == 0 ){
+            favorites = [Bool]( repeating: false, count: locationArrayLength )
+             defaults.set(favorites, forKey: "Favorites")
+            defaults.synchronize()
+//                defaults.set([Bool]( repeating: false, count: locationArrayLength ), forKey: "Favorites")
         }
+//        else if (favorites.count != locationArrayLength){
+//            
+//        }
         
         self.image.image = UIImage(named: "\(location_array.name).jpg")
-        var i = 0;
-        while (i < (favorites?.count)!){
-            if(favorites?[i] == index){
-               self.favoriteStar.image = UIImage(named: "Star.jpeg")
-            }
-            i = i + 1
+        
+        if ( favorites[index]) {
+            self.favoriteStar.image = UIImage(named: "Star.jpeg")
+            favoriteButton.setTitle("Remove from Favorites", for: .normal)
+            isFavorite = true
+            print("is favorite")
+
         }
+//        var i = 0;
+//        while (i < (favorites?.count)!){
+//            if(favorites?[i] == index){
+//               self.favoriteStar.image = UIImage(named: "Star.jpeg")
+//                favoriteButton.setTitle("Remove from Favorites", for: .normal)
+//                isFavorite = true
+//                print("is favorite")
+//            }
+//            i = i + 1
+//        }
         
-        
+//        print (favorites ?? "")
         
         slider.setValue(Float(location_array.lineCount), animated: false)
         if (location_array.food == 1){
@@ -81,12 +101,27 @@ class DetailedViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func favoriteButton(_ sender: Any) {
-        self.favoriteStar.image = UIImage(named: "Star.jpeg")
-        var favorites = defaults.array(forKey: "Favorites")
-        favorites?.append(index)
-        defaults.set(favorites, forKey: "Favorites")
-        
-    }
     
+    @IBAction func favoriteButton(_ sender: Any) {
+        if (isFavorite){
+            self.favoriteStar.image = nil
+            favorites = defaults.array(forKey: "Favorites") as! [Bool]
+            favorites[index] = false
+            defaults.set(favorites, forKey: "Favorites")
+//            favorites?.remove(at: index)
+            favoriteButton.setTitle("Add to Favorites", for: .normal)
+            isFavorite = false
+            defaults.synchronize()
+            
+        }
+        else {
+            self.favoriteStar.image = UIImage(named: "Star.jpeg")
+            favorites = defaults.array(forKey: "Favorites") as! [Bool]
+            favorites[index] = true
+            defaults.set(favorites, forKey: "Favorites")
+            isFavorite = true
+            favoriteButton.setTitle("Remove from Favorites", for: .normal)
+            defaults.synchronize()
+        }
+    }
 }

@@ -25,7 +25,8 @@ class MapViewController: UIViewController {
     var settings = [NSManagedObject]()
     var ref: FIRDatabaseReference?
     var databaseHandle:FIRDatabaseHandle?
-    
+//    let defaults = UserDefaults.standard
+    var index: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -64,8 +65,8 @@ class MapViewController: UIViewController {
                     let dropPin = CustomPointAnnotation()
                     dropPin.coordinate = loc
                     dropPin.title = name
-                    
-                    dropPin.pinCustomImageName = self.customPinImage(type: type!, lineCount: lineCount!)
+//                    let index = Locations.Constructs.Locations.location_array.count - 1
+                    dropPin.pinCustomImageName = self.customPinImage(type: type!, lineCount: lineCount!, index:index!)
                     
                     self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
                     self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
@@ -81,6 +82,7 @@ class MapViewController: UIViewController {
         searchBar.autocorrectionType = UITextAutocorrectionType.no
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
         self.view.addGestureRecognizer(tap)
+        self.viewWillAppear(true)
     }
     
     func func_tap(gesture: UITapGestureRecognizer) {
@@ -101,14 +103,14 @@ class MapViewController: UIViewController {
             dropPin.title = Locations.Constructs.Locations.location_array[index].name
             let type = Locations.Constructs.Locations.location_array[index].type
             let lineCount = Locations.Constructs.Locations.location_array[index].lineCount
-            dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount)
+            dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount, index:index)
             
             self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
             self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
         }
     }
     
-    func customPinImage(type: String, lineCount:Int) -> String {
+    func customPinImage(type: String, lineCount:Int, index:Int) -> String {
         var gSetting:Int?
         var oSetting:Int?
         if ( settings.count >= 1 ){
@@ -126,7 +128,10 @@ class MapViewController: UIViewController {
         }
         var constructColor = "green"
         var constructType = "restaurant"
-        if ( type == "cafe" ) {
+        if ( checkIfFavorites(index:index)){
+            constructType = "favorite"
+        }
+        else if ( type == "cafe" ) {
             constructType = "cafe"
         } else if ( type == "restaurant" ) {
             constructType = "restaurant"
@@ -157,7 +162,7 @@ class MapViewController: UIViewController {
                     dropPin.title = Locations.Constructs.Locations.location_array[index].name
                 let type = Locations.Constructs.Locations.location_array[index].type
                 let lineCount = Locations.Constructs.Locations.location_array[index].lineCount
-                dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount)
+                dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount, index:index)
                 
                 self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
                 self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
@@ -182,12 +187,24 @@ class MapViewController: UIViewController {
                 dropPin.title = Locations.Constructs.Locations.location_array[index].name
                 let type = Locations.Constructs.Locations.location_array[index].type
                 let lineCount = Locations.Constructs.Locations.location_array[index].lineCount
-                dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount)
+                dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount, index:index)
                 
                 self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
                 self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
             }
         }
+    }
+    
+    func checkIfFavorites(index:Int) -> Bool{
+        print("Calling checkIfFavorites")
+        let defaults = UserDefaults.standard
+        var favorites = (defaults.array(forKey: "Favorites")) as? [Bool]
+        if (favorites?.count == 0 ){
+            favorites = [Bool]( repeating: false, count: 20 )
+            defaults.set(favorites, forKey: "Favorites")
+            defaults.synchronize()
+        }
+        return favorites![index]
     }
     
     func displayAlert (_ message: String){
