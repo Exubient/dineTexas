@@ -64,12 +64,10 @@ class MapViewController: UIViewController {
                     let lat = actualValue["latitude"] as? Double
                     let lon = actualValue["longitude"] as? Double
                     let loc = CLLocationCoordinate2DMake(lat!, lon!)
-//                    let key = actualValue["key"] as? Int
-//                    print(key)
+
                     let dropPin = CustomPointAnnotation()
                     dropPin.coordinate = loc
                     dropPin.title = name
-//                    let index = Locations.Constructs.Locations.location_array.count - 1
                     dropPin.pinCustomImageName = self.customPinImage(type: type!, lineCount: lineCount!, index:Locations.Constructs.Locations.location_array.count)
                     dropPin.value = Locations.Constructs.Locations.location_array.count
                     print("***3: \(dropPin.value)")
@@ -265,33 +263,9 @@ class MapViewController: UIViewController {
         return annotationView
     }
     func pressButton(button: UIButton) {
-        print(button.tag)
-        print("pressed!")
+        
         selectedIndex = button.tag
-//        
-//        if let resultController = storyboard!.instantiateViewController(withIdentifier: "detailedVC") as? DetailedViewController {
-//                let indexPath: Int = button.tag
-//                let data =  Locations.Constructs.Locations.location_array[button.tag]
-//                resultController.location_array = data
-//                resultController.index = indexPath
-//                resultController.locationArrayLength =  Locations.Constructs.Locations.location_array.count
-//                resultController.showDissmissButton = true
-//                present(resultController, animated: true, completion: nil)
-//        }
-        
-        //@@@@
-        
-        //all we mihgt have to do is send the index of the button pressed and then we can access all the data with the index in the detailedVC rather than sennding to on the button
-        //@@@@
-        
         self.performSegue(withIdentifier: "detailSegue", sender: nil)
-        
-//        let destinationViewController = DetailedViewController()
-//        let indexPath = button.tag
-//        let data = Locations.Constructs.Locations.location_array[indexPath]
-//            destinationViewController.location_array = data
-//            destinationViewController.index = indexPath
-//            destinationViewController.locationArrayLength = Locations.Constructs.Locations.location_array.count
         
     }
     fileprivate func loadData() {

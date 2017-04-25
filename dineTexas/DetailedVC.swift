@@ -25,12 +25,9 @@ class DetailedViewController: UIViewController {
     @IBOutlet weak var ratings: UISegmentedControl!
     @IBOutlet weak var favoriteButton: UIButton!
     var isFavorite = false
-//    let defaults = UserDefaults.standard
     var favorites:[Bool]!
+    
     override func viewDidLoad() {
-//        dissmissButton.isEnabled = true
-        
-        
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         favorites = defaults.array(forKey: "Favorites")  as? [Bool] ?? [Bool]()
@@ -101,8 +98,6 @@ class DetailedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    
     @IBAction func favoriteButton(_ sender: Any) {
         if (isFavorite){
             let defaults = UserDefaults.standard
@@ -114,7 +109,6 @@ class DetailedViewController: UIViewController {
             favoriteButton.setTitle("Add to Favorites", for: .normal)
             isFavorite = false
             defaults.synchronize()
-            
         }
         else {
             let defaults = UserDefaults.standard
