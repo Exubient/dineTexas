@@ -203,7 +203,7 @@ class MapViewController: UIViewController {
         print("Calling checkIfFavorites")
         let defaults = UserDefaults.standard
         var favorites = (defaults.array(forKey: "Favorites")) as? [Bool]
-        if (favorites?.count == 0 ){
+        if (favorites?.count != 20 ){
             favorites = [Bool]( repeating: false, count: 20 )
             defaults.set(favorites, forKey: "Favorites")
             defaults.synchronize()
