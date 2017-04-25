@@ -25,6 +25,7 @@ class MapViewController: UIViewController {
     var settings = [NSManagedObject]()
     var ref: FIRDatabaseReference?
     var databaseHandle:FIRDatabaseHandle?
+    var selectedIndex = 0
 //    let defaults = UserDefaults.standard
     var index: Int!
     
@@ -266,6 +267,7 @@ class MapViewController: UIViewController {
     func pressButton(button: UIButton) {
         print(button.tag)
         print("pressed!")
+        selectedIndex = button.tag
 //        
 //        if let resultController = storyboard!.instantiateViewController(withIdentifier: "detailedVC") as? DetailedViewController {
 //                let indexPath: Int = button.tag
@@ -314,6 +316,14 @@ class MapViewController: UIViewController {
             settings = results
         } else {
             print("Could not fetch")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? DetailedViewController {
+            destinationViewController.location_array = Locations.Constructs.Locations.location_array[selectedIndex]
+            destinationViewController.index = selectedIndex
+            destinationViewController.locationArrayLength = Locations.Constructs.Locations.location_array.count
         }
     }
 }
