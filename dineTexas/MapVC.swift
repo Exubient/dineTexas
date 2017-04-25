@@ -27,6 +27,7 @@ class MapViewController: UIViewController {
     var databaseHandle:FIRDatabaseHandle?
 //    let defaults = UserDefaults.standard
     var index: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -85,7 +86,6 @@ class MapViewController: UIViewController {
         searchBar.autocorrectionType = UITextAutocorrectionType.no
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
         self.view.addGestureRecognizer(tap)
-//        self.viewWillAppear(true)
     }
     
     func func_tap(gesture: UITapGestureRecognizer) {
@@ -266,24 +266,25 @@ class MapViewController: UIViewController {
     func pressButton(button: UIButton) {
         print(button.tag)
         print("pressed!")
-        
-        if let resultController = storyboard!.instantiateViewController(withIdentifier: "detailedVC") as? DetailedViewController {
-            let indexPath: Int = button.tag
-            let data =  Locations.Constructs.Locations.location_array[button.tag]
-            resultController.location_array = data
-            resultController.index = indexPath
-            resultController.locationArrayLength =  Locations.Constructs.Locations.location_array.count
-            resultController.showDissmissButton = true
-            present(resultController, animated: true, completion: nil)
-        }
-        
-//        if let destinationViewController = segue.destination as? DetailedViewController {
-//            let indexPath: Int = (self.tableView.indexPathForSelectedRow?.row)!
-//            let data = location_array[indexPath]
-//            destinationViewController.location_array = data
-//            destinationViewController.index = indexPath
-//            destinationViewController.locationArrayLength = location_array.count
+//        
+//        if let resultController = storyboard!.instantiateViewController(withIdentifier: "detailedVC") as? DetailedViewController {
+//                let indexPath: Int = button.tag
+//                let data =  Locations.Constructs.Locations.location_array[button.tag]
+//                resultController.location_array = data
+//                resultController.index = indexPath
+//                resultController.locationArrayLength =  Locations.Constructs.Locations.location_array.count
+//                resultController.showDissmissButton = true
+//                present(resultController, animated: true, completion: nil)
 //        }
+        self.performSegue(withIdentifier: "detailSegue", sender: nil)
+        
+        let destinationViewController = DetailedViewController()
+        let indexPath = button.tag
+        let data = Locations.Constructs.Locations.location_array[indexPath]
+            destinationViewController.location_array = data
+            destinationViewController.index = indexPath
+            destinationViewController.locationArrayLength = Locations.Constructs.Locations.location_array.count
+        
     }
     fileprivate func loadData() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
