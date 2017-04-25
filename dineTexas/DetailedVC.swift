@@ -10,11 +10,9 @@ import UIKit
 
 class DetailedViewController: UIViewController {
     
-    @IBOutlet weak var dissmissButton: UIButton!
     var location_array: Location!
     var index: Int!
     var locationArrayLength: Int!
-    var showDissmissButton: Bool!
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var slider: UISlider!
@@ -50,10 +48,6 @@ class DetailedViewController: UIViewController {
             favoriteButton.setTitle("Remove from Favorites", for: .normal)
             isFavorite = true
             print("is favorite")
-            if (showDissmissButton == nil || !showDissmissButton){
-                self.dissmissButton.isHidden = true
-                print("SHOULD BE HIDDEN")
-            }
         }
 //        var i = 0;
 //        while (i < (favorites?.count)!){
@@ -107,10 +101,7 @@ class DetailedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dimissVC(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-        
-    }
+
     
     @IBAction func favoriteButton(_ sender: Any) {
         if (isFavorite){

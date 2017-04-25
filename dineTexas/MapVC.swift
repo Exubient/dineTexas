@@ -70,8 +70,8 @@ class MapViewController: UIViewController {
                     dropPin.coordinate = loc
                     dropPin.title = name
 //                    let index = Locations.Constructs.Locations.location_array.count - 1
-                    dropPin.pinCustomImageName = self.customPinImage(type: type!, lineCount: lineCount!, index:index!)
-                    dropPin.value = index
+                    dropPin.pinCustomImageName = self.customPinImage(type: type!, lineCount: lineCount!, index:Locations.Constructs.Locations.location_array.count)
+                    dropPin.value = Locations.Constructs.Locations.location_array.count
                     print("***3: \(dropPin.value)")
                     self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
                     self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
