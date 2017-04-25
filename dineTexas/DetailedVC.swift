@@ -31,7 +31,8 @@ class DetailedViewController: UIViewController {
     var favorites:[Bool]!
     override func viewDidLoad() {
 //        dissmissButton.isEnabled = true
-
+        
+        
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         favorites = defaults.array(forKey: "Favorites")  as? [Bool] ?? [Bool]()
@@ -41,7 +42,7 @@ class DetailedViewController: UIViewController {
              defaults.set(favorites, forKey: "Favorites")
             defaults.synchronize()
         }
-        
+        location_array = Locations.Constructs.Locations.location_array[index]
         self.image.image = UIImage(named: "\(location_array.name).jpg")
         
         if ( favorites[index]) {

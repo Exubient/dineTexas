@@ -276,14 +276,20 @@ class MapViewController: UIViewController {
 //                resultController.showDissmissButton = true
 //                present(resultController, animated: true, completion: nil)
 //        }
+        
+        //@@@@
+        
+        //all we mihgt have to do is send the index of the button pressed and then we can access all the data with the index in the detailedVC rather than sennding to on the button
+        //@@@@
+        
         self.performSegue(withIdentifier: "detailSegue", sender: nil)
         
-        let destinationViewController = DetailedViewController()
-        let indexPath = button.tag
-        let data = Locations.Constructs.Locations.location_array[indexPath]
-            destinationViewController.location_array = data
-            destinationViewController.index = indexPath
-            destinationViewController.locationArrayLength = Locations.Constructs.Locations.location_array.count
+//        let destinationViewController = DetailedViewController()
+//        let indexPath = button.tag
+//        let data = Locations.Constructs.Locations.location_array[indexPath]
+//            destinationViewController.location_array = data
+//            destinationViewController.index = indexPath
+//            destinationViewController.locationArrayLength = Locations.Constructs.Locations.location_array.count
         
     }
     fileprivate func loadData() {
