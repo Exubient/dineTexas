@@ -62,12 +62,15 @@ class MapViewController: UIViewController {
                     let lat = actualValue["latitude"] as? Double
                     let lon = actualValue["longitude"] as? Double
                     let loc = CLLocationCoordinate2DMake(lat!, lon!)
+//                    let key = actualValue["key"] as? Int
+//                    print(key)
                     let dropPin = CustomPointAnnotation()
                     dropPin.coordinate = loc
                     dropPin.title = name
 //                    let index = Locations.Constructs.Locations.location_array.count - 1
                     dropPin.pinCustomImageName = self.customPinImage(type: type!, lineCount: lineCount!, index:index!)
-                    
+                    dropPin.value = index
+                    print("***3: \(dropPin.value)")
                     self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
                     self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
                     let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!)
@@ -82,7 +85,7 @@ class MapViewController: UIViewController {
         searchBar.autocorrectionType = UITextAutocorrectionType.no
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.func_tap))
         self.view.addGestureRecognizer(tap)
-        self.viewWillAppear(true)
+//        self.viewWillAppear(true)
     }
     
     func func_tap(gesture: UITapGestureRecognizer) {
@@ -104,7 +107,8 @@ class MapViewController: UIViewController {
             let type = Locations.Constructs.Locations.location_array[index].type
             let lineCount = Locations.Constructs.Locations.location_array[index].lineCount
             dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount, index:index)
-            
+            dropPin.value = index
+            print("***1: \(dropPin.value)")
             self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
             self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
         }
@@ -163,7 +167,8 @@ class MapViewController: UIViewController {
                 let type = Locations.Constructs.Locations.location_array[index].type
                 let lineCount = Locations.Constructs.Locations.location_array[index].lineCount
                 dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount, index:index)
-                
+                dropPin.value = index
+                print("***2: \(dropPin.value)")
                 self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
                 self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
             }
@@ -244,18 +249,42 @@ class MapViewController: UIViewController {
         }
         else {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifier)
-            annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         }
         
         if let annotationView = annotationView {
-            
             annotationView.canShowCallout = true
             let customPointAnnotation = annotation as! CustomPointAnnotation
             annotationView.image = UIImage(named: customPointAnnotation.pinCustomImageName)//"cafe-green.png")
+            print(customPointAnnotation.value)
+            let button = UIButton(type: .detailDisclosure)
+            button.tag = customPointAnnotation.value
+            button.addTarget(self, action: #selector(pressButton(button:)), for: .touchUpInside)
+            annotationView.rightCalloutAccessoryView = button
         }
         return annotationView
     }
-    
+    func pressButton(button: UIButton) {
+        print(button.tag)
+        print("pressed!")
+        
+        if let resultController = storyboard!.instantiateViewController(withIdentifier: "detailedVC") as? DetailedViewController {
+            let indexPath: Int = button.tag
+            let data =  Locations.Constructs.Locations.location_array[button.tag]
+            resultController.location_array = data
+            resultController.index = indexPath
+            resultController.locationArrayLength =  Locations.Constructs.Locations.location_array.count
+            resultController.showDissmissButton = true
+            present(resultController, animated: true, completion: nil)
+        }
+        
+//        if let destinationViewController = segue.destination as? DetailedViewController {
+//            let indexPath: Int = (self.tableView.indexPathForSelectedRow?.row)!
+//            let data = location_array[indexPath]
+//            destinationViewController.location_array = data
+//            destinationViewController.index = indexPath
+//            destinationViewController.locationArrayLength = location_array.count
+//        }
+    }
     fileprivate func loadData() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         

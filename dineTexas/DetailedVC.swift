@@ -10,9 +10,12 @@ import UIKit
 
 class DetailedViewController: UIViewController {
     
+    @IBOutlet weak var dissmissButton: UIButton!
     var location_array: Location!
     var index: Int!
     var locationArrayLength: Int!
+    var showDissmissButton: Bool!
+    
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var outlets: UISwitch!
@@ -24,31 +27,32 @@ class DetailedViewController: UIViewController {
     @IBOutlet weak var ratings: UISegmentedControl!
     @IBOutlet weak var favoriteButton: UIButton!
     var isFavorite = false
-    let defaults = UserDefaults.standard
+//    let defaults = UserDefaults.standard
     var favorites:[Bool]!
     override func viewDidLoad() {
+//        dissmissButton.isEnabled = true
+
         super.viewDidLoad()
-        
+        let defaults = UserDefaults.standard
         favorites = defaults.array(forKey: "Favorites")  as? [Bool] ?? [Bool]()
         print(favorites)
         if (favorites.count == 0 ){
             favorites = [Bool]( repeating: false, count: locationArrayLength )
              defaults.set(favorites, forKey: "Favorites")
             defaults.synchronize()
-//                defaults.set([Bool]( repeating: false, count: locationArrayLength ), forKey: "Favorites")
         }
-//        else if (favorites.count != locationArrayLength){
-//            
-//        }
         
         self.image.image = UIImage(named: "\(location_array.name).jpg")
         
         if ( favorites[index]) {
-            self.favoriteStar.image = UIImage(named: "Star.jpeg")
+            self.favoriteStar.image = UIImage(named: "Star.png")
             favoriteButton.setTitle("Remove from Favorites", for: .normal)
             isFavorite = true
             print("is favorite")
-
+            if (showDissmissButton == nil || !showDissmissButton){
+                self.dissmissButton.isHidden = true
+                print("SHOULD BE HIDDEN")
+            }
         }
 //        var i = 0;
 //        while (i < (favorites?.count)!){
@@ -102,8 +106,14 @@ class DetailedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func dimissVC(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
     @IBAction func favoriteButton(_ sender: Any) {
         if (isFavorite){
+            let defaults = UserDefaults.standard
             self.favoriteStar.image = nil
             favorites = defaults.array(forKey: "Favorites") as! [Bool]
             favorites[index] = false
@@ -115,7 +125,8 @@ class DetailedViewController: UIViewController {
             
         }
         else {
-            self.favoriteStar.image = UIImage(named: "Star.jpeg")
+            let defaults = UserDefaults.standard
+            self.favoriteStar.image = UIImage(named: "Star.png")
             favorites = defaults.array(forKey: "Favorites") as! [Bool]
             favorites[index] = true
             defaults.set(favorites, forKey: "Favorites")

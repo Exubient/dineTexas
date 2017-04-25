@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F297C2F1EA575EB0045BFFD /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F297C2E1EA575EB0045BFFD /* Locations.swift */; };
+		1F31D4EA1EAED784005CF405 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F31D4E91EAED784005CF405 /* Star.png */; };
 		1F46E3781EA3DC980010A58F /* cafe-green.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E3721EA3DC980010A58F /* cafe-green.png */; };
 		1F46E3791EA3DC980010A58F /* cafe-orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E3731EA3DC980010A58F /* cafe-orange.png */; };
 		1F46E37A1EA3DC980010A58F /* cafe-red.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F46E3741EA3DC980010A58F /* cafe-red.png */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		17151DAC14AEC0DFFE4EDC22 /* Pods-dineTexas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dineTexas.debug.xcconfig"; path = "Pods/Target Support Files/Pods-dineTexas/Pods-dineTexas.debug.xcconfig"; sourceTree = "<group>"; };
 		1F297C2E1EA575EB0045BFFD /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
+		1F31D4E91EAED784005CF405 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 		1F46E3721EA3DC980010A58F /* cafe-green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafe-green.png"; sourceTree = "<group>"; };
 		1F46E3731EA3DC980010A58F /* cafe-orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafe-orange.png"; sourceTree = "<group>"; };
 		1F46E3741EA3DC980010A58F /* cafe-red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafe-red.png"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 		D48A88E01E8097B7004C8678 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1F31D4E91EAED784005CF405 /* Star.png */,
 				1FB065C21EAD3F0100D9DB3D /* favorite-orange.png */,
 				1FB065C31EAD3F0100D9DB3D /* favorite-green.png */,
 				1FB065C41EAD3F0100D9DB3D /* favorite-red.png */,
@@ -321,6 +324,7 @@
 				EF4DC8DB1EA58F4900E806CB /* Star.jpeg in Resources */,
 				EF4DC8D41EA58D3F00E806CB /* Starbucks Coffee.jpg in Resources */,
 				EF4DC8D71EA58D3F00E806CB /* Torchy's Tacos.jpg in Resources */,
+				1F31D4EA1EAED784005CF405 /* Star.png in Resources */,
 				1F46E37D1EA3DC980010A58F /* restaurant-red.png in Resources */,
 				EF4DC8D21EA58D3F00E806CB /* Don Japanese Food Truck.jpg in Resources */,
 			);

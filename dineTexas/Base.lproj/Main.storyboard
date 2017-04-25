@@ -120,7 +120,7 @@
         <!--Detailed Location View-->
         <scene sceneID="k0c-jK-GVP">
             <objects>
-                <viewController id="Lzg-2m-5gv" customClass="DetailedViewController" customModule="dineTexas" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="detailedVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Lzg-2m-5gv" customClass="DetailedViewController" customModule="dineTexas" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EFI-57-p9C"/>
                         <viewControllerLayoutGuide type="bottom" id="yAr-W9-cTb"/>
@@ -264,6 +264,26 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNr-8c-uoM">
+                                <rect key="frame" x="173" y="588" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.45708915589999999" green="0.98418223859999998" blue="0.99218356610000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="dimissVC:" destination="Lzg-2m-5gv" eventType="touchUpInside" id="kEA-jN-xiN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUP-Hq-Vwq">
+                                <rect key="frame" x="174" y="588" width="54" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.45708915589999999" green="0.98418223859999998" blue="0.99218356610000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="dimissVC:" destination="Lzg-2m-5gv" eventType="touchUpInside" id="Xmc-aI-tfA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.113708131" green="0.1137354299" blue="0.11370643229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -326,6 +346,7 @@
                     <connections>
                         <outlet property="alcohol" destination="DOv-Ld-FT9" id="so6-lZ-DWr"/>
                         <outlet property="coffee" destination="aX1-8Q-IBe" id="WkR-JC-zKb"/>
+                        <outlet property="dissmissButton" destination="lUP-Hq-Vwq" id="cBq-4G-IDm"/>
                         <outlet property="favoriteButton" destination="LIq-DF-cny" id="ESb-2U-jMi"/>
                         <outlet property="favoriteStar" destination="xiy-P6-0DW" id="eVc-HU-Lz5"/>
                         <outlet property="food" destination="L4i-S9-d6S" id="cKk-Fr-aFr"/>
