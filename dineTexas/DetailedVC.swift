@@ -89,6 +89,7 @@ class DetailedViewController: UIViewController {
         }
         self.ratings.selectedSegmentIndex = location_array.averageRating - 1
         
+        self.title = location_array.name
         
         // Do any additional setup after loading the view.
     }

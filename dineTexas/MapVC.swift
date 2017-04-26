@@ -37,6 +37,7 @@ class MapViewController: UIViewController {
         //need to iterate over the number of locations
         var index:Int?
         index = 0
+        searchBar.text = ""
         //firebase reference
         ref = FIRDatabase.database().reference()
         //retreive data and listen
@@ -192,7 +193,7 @@ class MapViewController: UIViewController {
                 let type = Locations.Constructs.Locations.location_array[index].type
                 let lineCount = Locations.Constructs.Locations.location_array[index].lineCount
                 dropPin.pinCustomImageName = self.customPinImage(type: type, lineCount: lineCount, index:index)
-                
+                dropPin.value = index
                 self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
                 self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
             }

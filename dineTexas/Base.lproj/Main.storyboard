@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -232,9 +232,9 @@
                                 <color key="tintColor" red="0.45708915589999999" green="0.98418223859999998" blue="0.99218356610000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIq-DF-cny">
-                                <rect key="frame" x="123" y="502" width="129" height="30"/>
+                                <rect key="frame" x="83" y="502" width="244" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="JgF-vr-iBn"/>
+                                    <constraint firstAttribute="width" constant="244" id="JgF-vr-iBn"/>
                                     <constraint firstAttribute="height" constant="30" id="gPD-Rl-GqU"/>
                                 </constraints>
                                 <state key="normal" title="Add to Favorites">
@@ -299,7 +299,7 @@
                             <constraint firstItem="LFI-DP-3D9" firstAttribute="top" secondItem="h5C-61-G7r" secondAttribute="bottom" constant="23" id="gAu-az-fBF"/>
                             <constraint firstItem="Coi-Ph-gdZ" firstAttribute="leading" secondItem="vHa-G1-Bq3" secondAttribute="trailing" constant="34" id="gvP-LR-3PX"/>
                             <constraint firstItem="8xU-TY-9GI" firstAttribute="leading" secondItem="q5O-yx-zoD" secondAttribute="trailing" constant="34" id="hVa-ha-1iz"/>
-                            <constraint firstItem="LIq-DF-cny" firstAttribute="leading" secondItem="xiy-P6-0DW" secondAttribute="trailing" constant="48" id="iWX-kj-bAI"/>
+                            <constraint firstItem="LIq-DF-cny" firstAttribute="leading" secondItem="xiy-P6-0DW" secondAttribute="trailing" constant="8" id="iWX-kj-bAI"/>
                             <constraint firstItem="q5O-yx-zoD" firstAttribute="leading" secondItem="ydz-cb-aip" secondAttribute="leadingMargin" id="irF-w6-DdU"/>
                             <constraint firstItem="LIq-DF-cny" firstAttribute="top" secondItem="lid-8I-c0Y" secondAttribute="bottom" constant="8" id="jSa-a4-5RT"/>
                             <constraint firstItem="vHa-G1-Bq3" firstAttribute="top" secondItem="q5O-yx-zoD" secondAttribute="bottom" constant="20" id="kvK-uf-b6v"/>

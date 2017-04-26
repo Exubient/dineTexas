@@ -53,7 +53,7 @@ class AddLocationViewController: UIViewController, UITextFieldDelegate {
         displayAlert("This function will be implemented in the Final release")
     }
     @IBAction func Submit(_ sender: Any) {
-        displayAlert("This function will be implemented in the Final release")
+        displayAlert("Thank you for submitting a new location. Our admins will review and post.")
     }
     
     
