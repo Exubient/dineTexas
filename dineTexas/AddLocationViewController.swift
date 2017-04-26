@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
+import Firebase
+
 
 class AddLocationViewController: UIViewController, UITextFieldDelegate {
     var alertController:UIAlertController? = nil
+    
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var address: UITextField!
     @IBOutlet weak var hours: UITextField!
     @IBOutlet weak var website: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +59,10 @@ class AddLocationViewController: UIViewController, UITextFieldDelegate {
         displayAlert("This function will be implemented in the Final release")
     }
     @IBAction func Submit(_ sender: Any) {
+        let rootRef = FIRDatabase.database().reference()
+        let aNewPlayList = rootRef.child("menu suggestions").childByAutoId()
+        aNewPlayList.setValue("name: " + name.text! + " address: " + address.text! + " hours: " + hours.text! + " website: " + website.text!)
+        
         displayAlert("Thank you for submitting a new location. Our admins will review and post.")
     }
     
