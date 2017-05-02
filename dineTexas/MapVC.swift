@@ -29,6 +29,9 @@ class MapViewController: UIViewController {
 //    let defaults = UserDefaults.standard
     var index: Int!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -61,6 +64,7 @@ class MapViewController: UIViewController {
                     let coffee = actualValue["coffee"] as? Int
                     let alcohol = actualValue["alcohol"] as? Int
                     let averageRating = actualValue["averageRating"] as? Int
+                    let current = actualValue["current"] as? Int
                     let website = actualValue["website"] as? String
                     let lat = actualValue["latitude"] as? Double
                     let lon = actualValue["longitude"] as? Double
@@ -74,7 +78,7 @@ class MapViewController: UIViewController {
                     print("***3: \(dropPin.value)")
                     self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
                     self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
-                    let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!)
+                    let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!, current:current!)
                     Locations.Constructs.Locations.location_array.append(instance)
                     print(Locations.Constructs.Locations.location_array.count)
                 }

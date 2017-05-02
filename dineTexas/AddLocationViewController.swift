@@ -60,12 +60,11 @@ class AddLocationViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func Submit(_ sender: Any) {
         let rootRef = FIRDatabase.database().reference()
-        let newMenu = rootRef.child("menu suggestions").childByAutoId()
+        let newMenu = rootRef.child("suggestions").childByAutoId()
         newMenu.child("name").setValue(name.text!)
         newMenu.child("address").setValue(address.text!)
         newMenu.child("hours").setValue(hours.text!)
         newMenu.child("website").setValue(website.text!)
-    
         displayAlert("Thank you for submitting a new location. Our admins will review and post.")
     }
     

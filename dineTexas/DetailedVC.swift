@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
+import Firebase
+
 
 class DetailedViewController: UIViewController {
     
+
     var location_array: Location!
     var index: Int!
     var locationArrayLength: Int!
@@ -25,10 +30,15 @@ class DetailedViewController: UIViewController {
     @IBOutlet weak var ratings: UISegmentedControl!
     @IBOutlet weak var favoriteButton: UIButton!
     var isFavorite = false
+    var old: Int?
     var favorites:[Bool]!
+    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        old = location_array.current
         let defaults = UserDefaults.standard
         favorites = defaults.array(forKey: "Favorites")  as? [Bool] ?? [Bool]()
         print(favorites)
@@ -46,20 +56,10 @@ class DetailedViewController: UIViewController {
             isFavorite = true
             print("is favorite")
         }
-//        var i = 0;
-//        while (i < (favorites?.count)!){
-//            if(favorites?[i] == index){
-//               self.favoriteStar.image = UIImage(named: "Star.jpeg")
-//                favoriteButton.setTitle("Remove from Favorites", for: .normal)
-//                isFavorite = true
-//                print("is favorite")
-//            }
-//            i = i + 1
-//        }
         
-//        print (favorites ?? "")
         
         slider.setValue(Float(location_array.lineCount), animated: false)
+        
         if (location_array.food == 1){
             food.setOn(true, animated: false)
         }
@@ -98,6 +98,31 @@ class DetailedViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func save(_ sender: Any) {
+        let date = NSDate()
+        let calendar = NSCalendar.current
+        let hour = calendar.component(.hour, from: date as Date)
+        let minutes = calendar.component(.minute, from: date as Date)
+        let current = minutes + hour*60
+        let currentKey = String(index)
+        
+        let ref = FIRDatabase.database().reference()
+        ref.child("location").child(currentKey).updateChildValues(["current":current])
+        
+        print("current time in mins: ")
+        print(current)
+        print("time that was last updated: ")
+        print(self.old!)
+        
+        if (current - self.old! > 5){
+            ref.child("location").child(currentKey).updateChildValues(["lineCount":current])
+        }
+        
+        
+    }
+    
     
     @IBAction func favoriteButton(_ sender: Any) {
         if (isFavorite){

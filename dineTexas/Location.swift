@@ -9,7 +9,7 @@
 import Foundation
 
 class Location {
-    
+
     var key:Int
     var name:String
     var address:String
@@ -24,14 +24,16 @@ class Location {
     var webSite:String
     var lon:Double
     var lat:Double
+    var current:Int
     
-    init (key:Int, name:String, address:String, hours:String, type:String, lineCount:Int, outlets:Int, food:Int, coffee:Int, alcohol:Int, averageRating:Int, webSite:String, lon:Double, lat:Double
+    init (key:Int, name:String, address:String, hours:String, type:String, lineCount:Int, outlets:Int, food:Int, coffee:Int, alcohol:Int, averageRating:Int, webSite:String, lon:Double, lat:Double, current:Int
         ){
         self.key = key
         self.name = name
         self.address = address
         self.hours = hours
         self.type = type
+        self.current = current
         self.lineCount = lineCount
         self.outlets = outlets
         self.food = food
