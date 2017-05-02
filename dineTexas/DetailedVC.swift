@@ -63,7 +63,7 @@ class DetailedViewController: UIViewController {
 
 
         slider.setValue(Float(location_array.lineCount), animated: false)
-        
+        print("********* \(Float(location_array.lineCount))")
         if (location_array.food == 1){
             food.setOn(true, animated: false)
         }
@@ -123,12 +123,14 @@ class DetailedViewController: UIViewController {
         if (current - self.old! > 5){
             print(Int(slider.value))
             ref.child("location").child(currentKey).updateChildValues(["lineCount":Int(slider.value)])
+            location_array.lineCount = Int(slider.value)
             print("case1")
         }
         else{
             print(slider.value)
             let newLinecount:Int = (Int(slider.value) + location_array.lineCount)/2
             ref.child("location").child(currentKey).updateChildValues(["lineCount":newLinecount])
+            location_array.lineCount = newLinecount
             print("case2")
         }
     }
