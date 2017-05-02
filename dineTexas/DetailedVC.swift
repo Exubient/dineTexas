@@ -38,7 +38,6 @@ class DetailedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        old = location_array.current
         let defaults = UserDefaults.standard
         favorites = defaults.array(forKey: "Favorites")  as? [Bool] ?? [Bool]()
         print(favorites)
@@ -48,6 +47,8 @@ class DetailedViewController: UIViewController {
             defaults.synchronize()
         }
         location_array = Locations.Constructs.Locations.location_array[index]
+        old = location_array.current
+
         self.image.image = UIImage(named: "\(location_array.name).jpg")
         
         if ( favorites[index]) {
