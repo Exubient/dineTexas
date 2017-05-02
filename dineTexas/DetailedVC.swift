@@ -58,7 +58,10 @@ class DetailedViewController: UIViewController {
             print("is favorite")
         }
         
-        
+        slider.isUserInteractionEnabled = true
+        slider.isContinuous = true
+
+
         slider.setValue(Float(location_array.lineCount), animated: false)
         
         if (location_array.food == 1){
@@ -108,7 +111,7 @@ class DetailedViewController: UIViewController {
         let minutes = calendar.component(.minute, from: date as Date)
         let current = minutes + hour*60
         let currentKey = String(index)
-        
+        print(currentKey)
         let ref = FIRDatabase.database().reference()
         ref.child("location").child(currentKey).updateChildValues(["current":current])
         
@@ -118,10 +121,16 @@ class DetailedViewController: UIViewController {
         print(self.old!)
         
         if (current - self.old! > 5){
-            ref.child("location").child(currentKey).updateChildValues(["lineCount":current])
+            print(Int(slider.value))
+            ref.child("location").child(currentKey).updateChildValues(["lineCount":Int(slider.value)])
+            print("case1")
         }
-        
-        
+        else{
+            print(slider.value)
+            let newLinecount:Int = (Int(slider.value) + location_array.lineCount)/2
+            ref.child("location").child(currentKey).updateChildValues(["lineCount":newLinecount])
+            print("case2")
+        }
     }
     
     
