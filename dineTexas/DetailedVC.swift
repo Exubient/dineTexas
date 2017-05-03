@@ -10,14 +10,15 @@ import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 import Firebase
+import Foundation
+
 
 
 class DetailedViewController: UIViewController {
-    
-
     var location_array: Location!
     var index: Int!
     var locationArrayLength: Int!
+    var alertController:UIAlertController? = nil
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var slider: UISlider!
@@ -91,7 +92,7 @@ class DetailedViewController: UIViewController {
         else {
             alcohol.setOn(false, animated: false)
         }
-        self.ratings.selectedSegmentIndex = location_array.averageRating - 1
+        self.ratings.selectedSegmentIndex = location_array.averageRating/location_array.nRates - 1
         
         self.title = location_array.name
         
@@ -105,35 +106,76 @@ class DetailedViewController: UIViewController {
     
     
     @IBAction func save(_ sender: Any) {
-        let date = NSDate()
-        let calendar = NSCalendar.current
-        let hour = calendar.component(.hour, from: date as Date)
-        let minutes = calendar.component(.minute, from: date as Date)
-        let current = minutes + hour*60
-        let currentKey = String(index)
-        print(currentKey)
-        let ref = FIRDatabase.database().reference()
-        ref.child("location").child(currentKey).updateChildValues(["current":current])
         
-        print("current time in mins: ")
-        print(current)
-        print("time that was last updated: ")
-        print(self.old!)
+        let email = FIRAuth.auth()?.currentUser?.email
+        print(email!)
         
-        if (current - self.old! > 5){
-            print(Int(slider.value))
-            ref.child("location").child(currentKey).updateChildValues(["lineCount":Int(slider.value)])
-            location_array.lineCount = Int(slider.value)
-            print("case1")
+        let emailCheck = String(email!.characters.suffix(9))
+        print(emailCheck)
+        if (emailCheck == "gmail.com"){
+            
+        
+            let date = NSDate()
+            let calendar = NSCalendar.current
+            let hour = calendar.component(.hour, from: date as Date)
+            let minutes = calendar.component(.minute, from: date as Date)
+            let current = minutes + hour*60
+            let currentKey = String(index)
+            print(currentKey)
+            let ref = FIRDatabase.database().reference()
+            ref.child("location").child(currentKey).updateChildValues(["current":current])
+            print("current time in mins: ")
+            print(current)
+            print("time that was last updated: ")
+            print(self.old!)
+        
+        
+        //LineCount
+            if (current - self.old! > 5){
+                print(Int(slider.value))
+                ref.child("location").child(currentKey).updateChildValues(["lineCount":Int(slider.value)])
+                location_array.lineCount = Int(slider.value)
+                print("case1")
+            }
+            else{
+                print(slider.value)
+                let newLinecount:Int = (Int(slider.value) + location_array.lineCount)/2
+                ref.child("location").child(currentKey).updateChildValues(["lineCount":newLinecount])
+                location_array.lineCount = newLinecount
+                print("case2")
+            }
+        
+            //averageRating
+        
+            let nRates:Int = location_array.nRates
+            let AppRate = self.ratings.selectedSegmentIndex
+            let currentRate = location_array.averageRating
+            ref.child("location").child(currentKey).updateChildValues(["averageRating":(currentRate + AppRate)])
+            ref.child("location").child(currentKey).updateChildValues(["nRates":nRates+1])
+
+
+            
+            currentRate + AppRate
+            
         }
         else{
-            print(slider.value)
-            let newLinecount:Int = (Int(slider.value) + location_array.lineCount)/2
-            ref.child("location").child(currentKey).updateChildValues(["lineCount":newLinecount])
-            location_array.lineCount = newLinecount
-            print("case2")
+            displayAlert("you must be a UT student to rate/set line count")
+
         }
+        
     }
+    
+    func displayAlert (_ message: String){
+        self.alertController = UIAlertController(title: message, message: "", preferredStyle: UIAlertControllerStyle.alert)
+        let OKAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (action:UIAlertAction) in
+            print("Ok Button Pressed 1");
+        }
+        self.alertController!.addAction(OKAction)
+        self.present(alertController!, animated: true, completion: nil)
+    }
+
+    
+    
     
     
     @IBAction func favoriteButton(_ sender: Any) {

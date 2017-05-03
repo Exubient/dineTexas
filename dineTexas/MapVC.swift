@@ -69,6 +69,8 @@ class MapViewController: UIViewController {
                     let lat = actualValue["latitude"] as? Double
                     let lon = actualValue["longitude"] as? Double
                     let loc = CLLocationCoordinate2DMake(lat!, lon!)
+                    let nRates = actualValue["nRates"] as? Int
+
 
                     let dropPin = CustomPointAnnotation()
                     dropPin.coordinate = loc
@@ -78,7 +80,7 @@ class MapViewController: UIViewController {
                     print("***3: \(dropPin.value)")
                     self.pinAnnotationView = MKPinAnnotationView(annotation: dropPin, reuseIdentifier: "pin")
                     self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
-                    let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!, current:current!)
+                    let instance = Location(key: index!, name: name!, address: address!, hours: hours!, type: type!, lineCount: lineCount!, outlets: outlets!, food: food!, coffee: coffee!, alcohol: alcohol!, averageRating: averageRating!, webSite: website!, lon:lon!, lat:lat!, current:current!, nRates:nRates!)
                     Locations.Constructs.Locations.location_array.append(instance)
                     print(Locations.Constructs.Locations.location_array.count)
                 }
