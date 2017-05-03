@@ -150,12 +150,17 @@ class DetailedViewController: UIViewController {
             let nRates:Int = location_array.nRates
             let AppRate = self.ratings.selectedSegmentIndex
             let currentRate = location_array.averageRating
+            print("********* Nrates: \(nRates)")
+            print("********* AppRate: \(AppRate)")
+            print("********* currentRate: \(currentRate)")
+            print("********* nrate + 1: \(currentRate + 1)")
+            print("********* currentRate: \(currentRate)")
             ref.child("location").child(currentKey).updateChildValues(["averageRating":(currentRate + AppRate)])
-            ref.child("location").child(currentKey).updateChildValues(["nRates":nRates+1])
+            ref.child("location").child(currentKey).updateChildValues(["nRates":(nRates+1)])
 
-
+            location_array.nRates = nRates+1
+            location_array.averageRating = currentRate + AppRate
             
-            currentRate + AppRate
             
         }
         else{
