@@ -13,6 +13,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var orangeInput: UITextField!
     @IBOutlet weak var notifications: UISwitch!
     @IBOutlet weak var rememberLogin: UISwitch!
+   
     
     var alertController:UIAlertController? = nil
     var settings = [NSManagedObject]()
@@ -145,5 +146,9 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
         } else {
             print("Could not fetch")
         }
+    }
+    
+    @IBAction func logoutButton(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: "Login")
     }
 }
