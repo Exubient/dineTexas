@@ -110,9 +110,9 @@ class DetailedViewController: UIViewController {
         let email = FIRAuth.auth()?.currentUser?.email
         print(email!)
         
-        let emailCheck = String(email!.characters.suffix(9))
+        let emailCheck = String(email!.characters.suffix(10))
         print(emailCheck)
-        if (emailCheck == "gmail.com"){
+        if (emailCheck == "utexas.edu"){
             
         
             let date = NSDate()
