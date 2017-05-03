@@ -149,6 +149,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func logoutButton(_ sender: Any) {
+        self.navigationController?.isNavigationBarHidden = true
         UserDefaults.standard.set(false, forKey: "Login")
     }
 }

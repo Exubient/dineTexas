@@ -1039,7 +1039,7 @@
                                 </state>
                                 <connections>
                                     <action selector="logoutButton:" destination="lMJ-hd-aTf" eventType="touchUpInside" id="m2K-qY-diS"/>
-                                    <segue destination="Aya-Fp-zyb" kind="show" id="4Qk-Gh-gbE"/>
+                                    <segue destination="fkR-gH-bJw" kind="show" id="F8S-Xc-GlZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1332,7 +1332,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Paz-ca-QFF"/>
-        <segue reference="4Qk-Gh-gbE"/>
+        <segue reference="F8S-Xc-GlZ"/>
         <segue reference="18d-qy-1WE"/>
         <segue reference="gfi-qg-W0V"/>
     </inferredMetricsTieBreakers>

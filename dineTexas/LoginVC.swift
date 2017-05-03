@@ -25,6 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
         email.autocorrectionType = UITextAutocorrectionType.no
         password.autocorrectionType = UITextAutocorrectionType.no
         
