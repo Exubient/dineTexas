@@ -50,6 +50,8 @@
 		EF4DC8D71EA58D3F00E806CB /* Torchy's Tacos.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8CF1EA58D3F00E806CB /* Torchy's Tacos.jpg */; };
 		EF4DC8DB1EA58F4900E806CB /* Star.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EF4DC8DA1EA58F4900E806CB /* Star.jpeg */; };
 		EF6AA5BE1E85DD59006334F2 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */; };
+		EFBDEED01EBD222E0027DE67 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = EFBDEECE1EBD222E0027DE67 /* check.png */; };
+		EFBDEED11EBD222E0027DE67 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFBDEECF1EBD222E0027DE67 /* x.png */; };
 		EFCDBB9C1E65F88E0053EFA2 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCDBB9B1E65F88D0053EFA2 /* MapVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,8 @@
 		EF4DC8CF1EA58D3F00E806CB /* Torchy's Tacos.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Torchy's Tacos.jpg"; sourceTree = "<group>"; };
 		EF4DC8DA1EA58F4900E806CB /* Star.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Star.jpeg; sourceTree = "<group>"; };
 		EF6AA5BD1E85DD59006334F2 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		EFBDEECE1EBD222E0027DE67 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		EFBDEECF1EBD222E0027DE67 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 		EFCDBB9B1E65F88D0053EFA2 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +174,8 @@
 		D48A88E01E8097B7004C8678 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EFBDEECE1EBD222E0027DE67 /* check.png */,
+				EFBDEECF1EBD222E0027DE67 /* x.png */,
 				1F31D4E91EAED784005CF405 /* Star.png */,
 				1FB065C21EAD3F0100D9DB3D /* favorite-orange.png */,
 				1FB065C31EAD3F0100D9DB3D /* favorite-green.png */,
@@ -309,6 +315,7 @@
 				EF4DC8D51EA58D3F00E806CB /* Taco Cabana.jpg in Resources */,
 				1FB065C51EAD3F0100D9DB3D /* favorite-orange.png in Resources */,
 				D48A88E41E8097DB004C8678 /* logo.png in Resources */,
+				EFBDEED01EBD222E0027DE67 /* check.png in Resources */,
 				D4E881181E70D914002E80C5 /* GoogleService-Info.plist in Resources */,
 				1FB065C61EAD3F0100D9DB3D /* favorite-green.png in Resources */,
 				EF4DC8D31EA58D3F00E806CB /* Kerbey Lane Cafe.jpg in Resources */,
@@ -316,6 +323,7 @@
 				1F46E37C1EA3DC980010A58F /* restaurant-orange.png in Resources */,
 				EF4DC8D61EA58D3F00E806CB /* Texas Expresso.jpg in Resources */,
 				1F46E3791EA3DC980010A58F /* cafe-orange.png in Resources */,
+				EFBDEED11EBD222E0027DE67 /* x.png in Resources */,
 				1F46E37A1EA3DC980010A58F /* cafe-red.png in Resources */,
 				EF4DC8D01EA58D3F00E806CB /* Caffé Medici.jpg in Resources */,
 				1FB065C71EAD3F0100D9DB3D /* favorite-red.png in Resources */,

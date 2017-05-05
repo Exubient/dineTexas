@@ -22,11 +22,6 @@ class DetailedViewController: UIViewController {
     
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var outlets: UISwitch!
-    @IBOutlet weak var food: UISwitch!
-    @IBOutlet weak var coffee: UISwitch!
-    @IBOutlet weak var alcohol: UISwitch!
-    @IBOutlet weak var wifi: UISwitch!
     @IBOutlet weak var favoriteStar: UIImageView!
     @IBOutlet weak var ratings: UISegmentedControl!
     @IBOutlet weak var favoriteButton: UIButton!
@@ -34,6 +29,11 @@ class DetailedViewController: UIViewController {
     var old: Int?
     var favorites:[Bool]!
     
+    @IBOutlet weak var outletImage: UIImageView!
+    @IBOutlet weak var foodImage: UIImageView!
+    @IBOutlet weak var coffeeImage: UIImageView!
+    @IBOutlet weak var alcoholImage: UIImageView!
+    @IBOutlet weak var wifiImage: UIImageView!
 
     
     
@@ -66,32 +66,33 @@ class DetailedViewController: UIViewController {
         slider.setValue(Float(location_array.lineCount), animated: false)
         print("********* \(Float(location_array.lineCount))")
         if (location_array.food == 1){
-            food.setOn(true, animated: false)
+            self.foodImage.image = UIImage(named: "check.png")
         }
         else {
-            food.setOn(false, animated: false)
+            self.foodImage.image = UIImage(named: "x.png")
         }
         
         if (location_array.outlets == 1){
-            outlets.setOn(true, animated: false)
+            self.outletImage.image = UIImage(named: "check.png")
         }
         else {
-            outlets.setOn(false, animated: false)
+            self.outletImage.image = UIImage(named: "x.png")
         }
         
         if (location_array.coffee == 1){
-            coffee.setOn(true, animated: false)
+            self.coffeeImage.image = UIImage(named: "check.png")
         }
         else {
-            coffee.setOn(false, animated: false)
+            self.coffeeImage.image = UIImage(named: "x.png")
         }
         
         if (location_array.alcohol == 1){
-            alcohol.setOn(true, animated: false)
+            self.alcoholImage.image = UIImage(named: "check.png")
         }
         else {
-            alcohol.setOn(false, animated: false)
+            self.alcoholImage.image = UIImage(named: "x.png")
         }
+        self.wifiImage.image = UIImage(named: "x.png")
         self.ratings.selectedSegmentIndex = location_array.averageRating/location_array.nRates - 1
         
         self.title = location_array.name
