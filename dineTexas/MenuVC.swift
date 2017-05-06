@@ -9,11 +9,15 @@
 import UIKit
 
 class MenuViewController: UIViewController {
+    var websiteURL: String!
+    @IBOutlet weak var website: UIWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print ("\(websiteURL)")
+        let url = NSURL (string: websiteURL)
+        let requestObj = URLRequest(url: url! as URL)
+        website.loadRequest(requestObj)
     }
 
     override func didReceiveMemoryWarning() {

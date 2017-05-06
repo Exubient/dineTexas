@@ -223,12 +223,6 @@
                                     <action selector="favoriteButton:" destination="Lzg-2m-5gv" eventType="touchUpInside" id="Ecm-YB-b1d"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RF-58-rKe">
-                                <rect key="frame" x="260" y="251" width="92" height="30"/>
-                                <state key="normal" title="Upload Menu">
-                                    <color key="titleColor" red="0.45708915589999999" green="0.98418223859999998" blue="0.99218356610000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xiy-P6-0DW">
                                 <rect key="frame" x="16" y="489" width="59" height="56"/>
                                 <constraints>
@@ -289,7 +283,6 @@
                             <constraint firstItem="LFI-DP-3D9" firstAttribute="centerY" secondItem="meo-qs-sUO" secondAttribute="centerY" id="4La-jd-hl3"/>
                             <constraint firstItem="6yp-g6-Gs0" firstAttribute="top" secondItem="EFI-57-p9C" secondAttribute="bottom" id="5l2-bp-uSa"/>
                             <constraint firstItem="pV5-2K-DGZ" firstAttribute="top" secondItem="fG2-tO-Mi3" secondAttribute="bottom" constant="8" id="8cM-jc-iob"/>
-                            <constraint firstItem="3RF-58-rKe" firstAttribute="leading" secondItem="Coi-Ph-gdZ" secondAttribute="trailing" constant="21" id="9MA-9a-A9x"/>
                             <constraint firstItem="8xU-TY-9GI" firstAttribute="top" secondItem="6yp-g6-Gs0" secondAttribute="bottom" constant="17" id="9S2-TB-Vs7"/>
                             <constraint firstItem="LIq-DF-cny" firstAttribute="top" secondItem="7af-EA-nOG" secondAttribute="bottom" constant="18" id="9uZ-GH-fl4"/>
                             <constraint firstItem="7af-EA-nOG" firstAttribute="trailing" secondItem="Jur-KE-dGc" secondAttribute="trailing" id="AKy-dl-bz5"/>
@@ -305,7 +298,6 @@
                             <constraint firstItem="fG2-tO-Mi3" firstAttribute="leading" secondItem="duK-eq-GW8" secondAttribute="trailing" constant="57" id="Pos-G4-Pdu"/>
                             <constraint firstItem="vHa-G1-Bq3" firstAttribute="leading" secondItem="ydz-cb-aip" secondAttribute="leadingMargin" id="Xax-Ln-v7e"/>
                             <constraint firstItem="SpG-1X-jid" firstAttribute="top" secondItem="xiy-P6-0DW" secondAttribute="bottom" constant="19" id="Ydo-Ld-chv"/>
-                            <constraint firstItem="3RF-58-rKe" firstAttribute="top" secondItem="8xU-TY-9GI" secondAttribute="bottom" constant="12" id="Z5k-um-lmo"/>
                             <constraint firstItem="meo-qs-sUO" firstAttribute="leading" secondItem="LFI-DP-3D9" secondAttribute="trailing" constant="57" id="ZA8-8u-XI3"/>
                             <constraint firstItem="pV5-2K-DGZ" firstAttribute="leading" secondItem="h5C-61-G7r" secondAttribute="trailing" constant="57" id="e8F-aR-lJg"/>
                             <constraint firstItem="q5O-yx-zoD" firstAttribute="top" secondItem="6yp-g6-Gs0" secondAttribute="bottom" constant="22" id="eVj-Ge-m1G"/>
@@ -518,18 +510,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6NU-Qj-Fhl">
-                                <rect key="frame" x="0.0" y="72" width="375" height="546"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iGf-Pt-7TP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iGf-Pt-7TP" secondAttribute="trailing" id="4Zm-66-bgP"/>
+                            <constraint firstItem="iGf-Pt-7TP" firstAttribute="leading" secondItem="PE4-sU-cyV" secondAttribute="leading" id="8Os-mv-4sn"/>
+                            <constraint firstItem="3L6-6q-Cl6" firstAttribute="top" secondItem="iGf-Pt-7TP" secondAttribute="bottom" id="adK-tV-vvt"/>
+                            <constraint firstItem="iGf-Pt-7TP" firstAttribute="top" secondItem="lVy-ar-WSB" secondAttribute="bottom" id="lMD-7j-Wr0"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="axs-e7-Wkn"/>
+                    <connections>
+                        <outlet property="website" destination="iGf-Pt-7TP" id="jAQ-4G-a2A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INr-Z5-IXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4289" y="1389"/>
+            <point key="canvasLocation" x="4288.8000000000002" y="1388.4557721139431"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="mFg-Ju-5K6">

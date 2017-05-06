@@ -214,4 +214,10 @@ class DetailedViewController: UIViewController {
             defaults.synchronize()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? MenuViewController {
+            destinationViewController.websiteURL = location_array.webSite
+        }
+    }
 }
