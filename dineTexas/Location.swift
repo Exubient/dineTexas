@@ -20,6 +20,7 @@ class Location {
     var food:Int
     var coffee:Int
     var alcohol:Int
+    var wifi:Int
     var averageRating:Int
     var webSite:String
     var lon:Double
@@ -27,7 +28,7 @@ class Location {
     var current:Int
     var nRates:Int
     
-    init (key:Int, name:String, address:String, hours:String, type:String, lineCount:Int, outlets:Int, food:Int, coffee:Int, alcohol:Int, averageRating:Int, webSite:String, lon:Double, lat:Double, current:Int, nRates:Int
+    init (key:Int, name:String, address:String, hours:String, type:String, lineCount:Int, outlets:Int, food:Int, coffee:Int, alcohol:Int, averageRating:Int, webSite:String, lon:Double, lat:Double, current:Int, nRates:Int, wifi:Int
         ){
         self.key = key
         self.name = name
@@ -45,6 +46,7 @@ class Location {
         self.lon = lon
         self.lat = lat
         self.nRates = nRates
+        self.wifi = wifi
         
     }
 }

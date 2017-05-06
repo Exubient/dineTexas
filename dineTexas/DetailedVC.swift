@@ -92,7 +92,14 @@ class DetailedViewController: UIViewController {
         else {
             self.alcoholImage.image = UIImage(named: "x.png")
         }
-        self.wifiImage.image = UIImage(named: "x.png")
+        if (location_array.wifi == 1){
+            self.wifiImage.image = UIImage(named: "check.png")
+        }
+        else {
+            self.wifiImage.image = UIImage(named: "x.png")
+        }
+        
+    
         self.ratings.selectedSegmentIndex = location_array.averageRating/location_array.nRates - 1
         
         self.title = location_array.name
