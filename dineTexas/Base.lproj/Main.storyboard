@@ -197,7 +197,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SpG-1X-jid">
-                                <rect key="frame" x="19.5" y="564" width="336" height="29"/>
+                                <rect key="frame" x="20" y="564" width="336" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="336" id="Qud-dk-FNP"/>
                                 </constraints>
@@ -229,9 +229,10 @@
                                     <color key="titleColor" red="0.45708915589999999" green="0.98418223859999998" blue="0.99218356610000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xiy-P6-0DW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xiy-P6-0DW">
                                 <rect key="frame" x="16" y="489" width="59" height="56"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="k0B-dW-0nV"/>
                                     <constraint firstAttribute="width" constant="59" id="pFz-vy-J6T"/>
                                 </constraints>
                             </imageView>
@@ -303,6 +304,7 @@
                             <constraint firstItem="Jur-KE-dGc" firstAttribute="centerX" secondItem="LFI-DP-3D9" secondAttribute="centerX" id="LEW-ot-C9L"/>
                             <constraint firstItem="fG2-tO-Mi3" firstAttribute="leading" secondItem="duK-eq-GW8" secondAttribute="trailing" constant="57" id="Pos-G4-Pdu"/>
                             <constraint firstItem="vHa-G1-Bq3" firstAttribute="leading" secondItem="ydz-cb-aip" secondAttribute="leadingMargin" id="Xax-Ln-v7e"/>
+                            <constraint firstItem="SpG-1X-jid" firstAttribute="top" secondItem="xiy-P6-0DW" secondAttribute="bottom" constant="19" id="Ydo-Ld-chv"/>
                             <constraint firstItem="3RF-58-rKe" firstAttribute="top" secondItem="8xU-TY-9GI" secondAttribute="bottom" constant="12" id="Z5k-um-lmo"/>
                             <constraint firstItem="meo-qs-sUO" firstAttribute="leading" secondItem="LFI-DP-3D9" secondAttribute="trailing" constant="57" id="ZA8-8u-XI3"/>
                             <constraint firstItem="pV5-2K-DGZ" firstAttribute="leading" secondItem="h5C-61-G7r" secondAttribute="trailing" constant="57" id="e8F-aR-lJg"/>
@@ -542,7 +544,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGV-x9-hZK">
-                                <rect key="frame" x="123" y="279" width="129" height="30"/>
+                                <rect key="frame" x="123" y="230" width="129" height="30"/>
                                 <state key="normal" title="Create An Account">
                                     <color key="titleColor" red="0.45708915591239929" green="0.98418223857879639" blue="0.99218356609344482" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -551,7 +553,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG0-WJ-5GG">
-                                <rect key="frame" x="168" y="399" width="38" height="30"/>
+                                <rect key="frame" x="168" y="350" width="38" height="30"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.45708915589999999" green="0.98418223859999998" blue="0.99218356610000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
