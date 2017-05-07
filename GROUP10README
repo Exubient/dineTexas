@@ -1,6 +1,6 @@
 Implementation Contributions:
 Henry Kim - Created missing parts of DB. Coded rating system. Coded line count system. Locked down rating and line count to @utexas accounts.
-John Madden - Added webview for viewing the location's menu. Added logout feature. Added custome images for details of location.
+John Madden - Added webview for viewing the location's menu. Added logout feature. Added custom images for details of location.
 Matt Davidson - Created this readme. Worked on debugging issues Such as: 1. not being able to laod http or https pages if the certificate was not valid 2. An issue where the ratings system was not updating on the database half of the time 3. The index of the location was not updating properly after loading the map UI. Created the favorite system algorithm, which was coded by Henry. Fixed a few  UI constraints. 
 
 Grading Level: Same grade for all members.
