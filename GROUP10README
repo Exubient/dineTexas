@@ -1,13 +1,12 @@
 Implementation Contributions:
-Henry Kim - Implemented firebase and added registration features to the app. Set up the password reset button. Added pods that are used for firebase. Changed the background color  to match the logo. Created database that is used for storing locations on the map on firebase. Implemented the search box, on the mapVC to find a location. 
-John Madden - Finished the login features, which uses the firebase server to check for a valid username and password to login. Set this to default login, so the user will only login once. Added pins for the locations on the server, and added to the default list of coffee shops and restaurants. Implemented table view to show this list of locations and added ability to favorite a location. Also did README. 
-Matt Davidson - Created the custom pins to be used on the map and modified the basic pin tool to use these new pins. These are color coded based on the number of people in the lines. Also created pins for separate categories, such as a restaurant or a cafe. Added settings to core data, so they will keep it’s state after closing the app. 
+Henry Kim - 
+John Madden - 
+Matt Davidson - Created this readme. Worked on debugging issues Such as: 1. not being able to laod http or https pages if the certificate was not valid 2. An issue where the ratings system was not updating on the database half of the time 3. The index of the location was not updating properly after loading the map UI.Created the favorite system algorithm, which was coded by Henry. Fixed a few  UI constraints. 
 
 Grading Level: Same grade for all members.
 
 Differences:
-In the App Idea Paper, we said that we would use Google Maps API for the map system. Instead, we used Apple Maps API. This is because the Apple Maps API was much easier to use and design for in the Beta. We also said that Users will be able to add locations to the list, which we still plan to do, but will be added to the final. This function right now is only implemented through direct contact with admins, who can then modify the firebase database directly. We also have the visual representation of the rating/favorite system on the detailed view controller of a location, which is accessible through the list of locations, from the tab bar. Many of the final features have also been implemented with this version too, such as part of the favorite system, labels for representation in the detailed view and a picture of the location in the detailed view. 
+One of the questions that was asked in our presentation is "Can users flip the switch to change if a location has outlets or not", this was not the intended function of the app and the UI was missleading by using switches. Because of this, we are now using "check" and "x" indicators to denote whether a location has a "feature" or not. 
 
 Special Instructions:
-If you create an account and log into the app, then close and re-open the app, it will remember your authentication state and instead of going back to the login/registration screen it will connect you to the app. To create an account, make sure to use a password of at least 6 characters so that you will be able to login to the app. For easier access, you can simply use one of our test accounts: test@test.com, password: password, to login to the application if you are having problems. 
-
+Only @utexas email accounts will be able to rate (as noted on the app idea paper).
