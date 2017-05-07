@@ -1,12 +1,12 @@
 Implementation Contributions:
-Henry Kim - 
-John Madden - 
-Matt Davidson - Created this readme. Worked on debugging issues Such as: 1. not being able to laod http or https pages if the certificate was not valid 2. An issue where the ratings system was not updating on the database half of the time 3. The index of the location was not updating properly after loading the map UI.Created the favorite system algorithm, which was coded by Henry. Fixed a few  UI constraints. 
+Henry Kim - Created missing parts of DB. Coded rating system. Coded line count system. Locked down rating and line count to @utexas accounts.
+John Madden - Added webview for viewing the location's menu. Added logout feature. Added custome images for details of location.
+Matt Davidson - Created this readme. Worked on debugging issues Such as: 1. not being able to laod http or https pages if the certificate was not valid 2. An issue where the ratings system was not updating on the database half of the time 3. The index of the location was not updating properly after loading the map UI. Created the favorite system algorithm, which was coded by Henry. Fixed a few  UI constraints. 
 
 Grading Level: Same grade for all members.
 
 Differences:
-One of the questions that was asked in our presentation is "Can users flip the switch to change if a location has outlets or not", this was not the intended function of the app and the UI was missleading by using switches. Because of this, we are now using "check" and "x" indicators to denote whether a location has a "feature" or not. 
+One of the questions that was asked in our presentation is "Can users flip the switch to change if a location has outlets or not", this was not the intended function of the app and the UI was misleading by using switches. Because of this, we are now using "check" and "x" indicators to denote whether a location has a "feature" or not. We were originally going to have a rating system for each "feature" of the location (i.e. outlets, wifi, food, etc), however we received feedback from our testers that it seemed too overtaxing and over complicated so we decided to just stick with the rating for the location. We decided to stick with the line count as opposed to the timer as well since the line count gives the user an idea of how long the wait is.
 
 Special Instructions:
-Only @utexas email accounts will be able to rate (as noted on the app idea paper).
+Only @utexas email accounts will be able to rate and submit line count detail (as noted on the app idea paper).
